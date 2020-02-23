@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
+		55BFD5B12403243D00D9235A /* MVVMCommons in Frameworks */ = {isa = PBXBuildFile; productRef = 55BFD5B02403243D00D9235A /* MVVMCommons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BFD5B12403243D00D9235A /* MVVMCommons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,9 @@
 			dependencies = (
 			);
 			name = MVVM;
+			packageProductDependencies = (
+				55BFD5B02403243D00D9235A /* MVVMCommons */,
+			);
 			productName = MVVM;
 			productReference = 5517D81A2402F34100053260 /* MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 5517D8112402F34100053260;
+			packageReferences = (
+				55BFD5AF2403243D00D9235A /* XCRemoteSwiftPackageReference "MVVMCommons" */,
+			);
 			productRefGroup = 5517D81B2402F34100053260 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -469,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55BFD5AF2403243D00D9235A /* XCRemoteSwiftPackageReference "MVVMCommons" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cardona/MVVMCommons.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55BFD5B02403243D00D9235A /* MVVMCommons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55BFD5AF2403243D00D9235A /* XCRemoteSwiftPackageReference "MVVMCommons" */;
+			productName = MVVMCommons;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5517D8122402F34100053260 /* Project object */;
 }

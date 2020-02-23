@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "cdb2f4a574c3f7ae9ac0b0913058d64ff6fa09ac",
+          "version": "5.0.1"
+        }
+      },
+      {
+        "package": "MVVMCommons",
+        "repositoryURL": "https://github.com/cardona/MVVMCommons.git",
+        "state": {
+          "branch": "master",
+          "revision": "8c437225c807a850eacfa9e7f34eaded950dc2b8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
