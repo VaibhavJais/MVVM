@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "cdb2f4a574c3f7ae9ac0b0913058d64ff6fa09ac",
-          "version": "5.0.1"
+          "revision": "b02c4ee7f1659090f7ac543c022f922beeb04bc6",
+          "version": "5.0.2"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/cardona/MVVMCommons.git",
         "state": {
           "branch": "master",
-          "revision": "8c437225c807a850eacfa9e7f34eaded950dc2b8",
+          "revision": "86a05590008fb1da02b30003d868d141d9e59fdd",
           "version": null
         }
       }
