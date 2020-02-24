@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MVVMCommons
+import SKRools
 
 struct ForcesDetailRequestValue {
     var queryString: String

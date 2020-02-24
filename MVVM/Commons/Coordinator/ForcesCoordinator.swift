@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MVVMCommons
+import SKRools
 
 class ForcesCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MVVMCommons
+import SKRools
 
 //MARK: - DIAppContainer
 final class DIAppContainer {

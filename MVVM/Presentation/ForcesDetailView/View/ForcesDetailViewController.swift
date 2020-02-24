@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MVVMCommons
+import SKRools
 
 //MARK: - ForcesDetailViewController
 class ForcesDetailViewController: UIViewController, Storyboarded {

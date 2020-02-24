@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5512D0012404866F002546F1 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 5512D0002404866F002546F1 /* SKRools */; };
 		5517D81E2402F34100053260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D81D2402F34100053260 /* AppDelegate.swift */; };
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
@@ -34,7 +35,6 @@
 		55BFD5F8240324B700D9235A /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5DD240324B700D9235A /* APIEndpoints.swift */; };
 		55BFD5F9240324B700D9235A /* DIForcesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5DF240324B700D9235A /* DIForcesContainer.swift */; };
 		55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5E0240324B700D9235A /* DIAppContainer.swift */; };
-		55BFD6242403320100D9235A /* MVVMCommons in Frameworks */ = {isa = PBXBuildFile; productRef = 55BFD6232403320100D9235A /* MVVMCommons */; };
 		55BFD62624041B8700D9235A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5D0240324B700D9235A /* Main.storyboard */; };
 		55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5CE240324B700D9235A /* ForcesListTableViewCell.xib */; };
 		55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5C5240324B700D9235A /* ForcesDetailStoryboard.storyboard */; };
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55BFD6242403320100D9235A /* MVVMCommons in Frameworks */,
+				5512D0012404866F002546F1 /* SKRools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +106,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5512CFFC24048529002546F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5517D8112402F34100053260 = {
 			isa = PBXGroup;
 			children = (
 				5517D81C2402F34100053260 /* MVVM */,
 				5517D8332402F34400053260 /* MVVMTests */,
 				5517D81B2402F34100053260 /* Products */,
+				5512CFFC24048529002546F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,7 +355,7 @@
 			);
 			name = MVVM;
 			packageProductDependencies = (
-				55BFD6232403320100D9235A /* MVVMCommons */,
+				5512D0002404866F002546F1 /* SKRools */,
 			);
 			productName = MVVM;
 			productReference = 5517D81A2402F34100053260 /* MVVM.app */;
@@ -400,7 +408,7 @@
 			);
 			mainGroup = 5517D8112402F34100053260;
 			packageReferences = (
-				55BFD6222403320100D9235A /* XCRemoteSwiftPackageReference "MVVMCommons" */,
+				5512CFFF2404866F002546F1 /* XCRemoteSwiftPackageReference "SKRools" */,
 			);
 			productRefGroup = 5517D81B2402F34100053260 /* Products */;
 			projectDirPath = "";
@@ -731,21 +739,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		55BFD6222403320100D9235A /* XCRemoteSwiftPackageReference "MVVMCommons" */ = {
+		5512CFFF2404866F002546F1 /* XCRemoteSwiftPackageReference "SKRools" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/cardona/MVVMCommons.git";
+			repositoryURL = "https://github.com/cardona/SKRools.git";
 			requirement = {
-				branch = master;
+				branch = develop;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		55BFD6232403320100D9235A /* MVVMCommons */ = {
+		5512D0002404866F002546F1 /* SKRools */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55BFD6222403320100D9235A /* XCRemoteSwiftPackageReference "MVVMCommons" */;
-			productName = MVVMCommons;
+			package = 5512CFFF2404866F002546F1 /* XCRemoteSwiftPackageReference "SKRools" */;
+			productName = SKRools;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

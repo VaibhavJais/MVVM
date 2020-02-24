@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MVVMCommons
+import SKRools
 
 // MARK: - ForcesListViewModel Protocol
 protocol ForcesListViewModel: ForcesListViewModelInput, ForcesListViewModelOutput {}

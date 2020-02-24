@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MVVMCommons
+import SKRools
 
 struct APIEndpoints {
     static func forcesList() -> Endpoint<ForcesListEntity> {

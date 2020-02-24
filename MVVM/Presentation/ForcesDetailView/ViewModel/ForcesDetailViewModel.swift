@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MVVMCommons
+import SKRools
 
 //MARK: - ForcesDetailViewModel
 protocol ForcesDetailViewModel: ForcesDetailViewModelInput, ForcesDetailViewModelOutput {}

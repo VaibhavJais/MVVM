@@ -11,11 +11,11 @@
         }
       },
       {
-        "package": "MVVMCommons",
-        "repositoryURL": "https://github.com/cardona/MVVMCommons.git",
+        "package": "SKRools",
+        "repositoryURL": "https://github.com/cardona/SKRools.git",
         "state": {
-          "branch": "master",
-          "revision": "86a05590008fb1da02b30003d868d141d9e59fdd",
+          "branch": "develop",
+          "revision": "cacbf5d8b070776192f2db7bb5961e696d136f48",
           "version": null
         }
       }

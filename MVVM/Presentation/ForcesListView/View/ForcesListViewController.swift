@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MVVMCommons
+import SKRools
 
 // MARK: - Private Constants
 private struct ForcesListViewControllerConstants {

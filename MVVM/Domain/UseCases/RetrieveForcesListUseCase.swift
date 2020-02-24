@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MVVMCommons
+import SKRools
 
 protocol ForcesListUseCase {
     @discardableResult
