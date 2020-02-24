@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "b02c4ee7f1659090f7ac543c022f922beeb04bc6",
+          "version": "5.0.2"
+        }
+      },
+      {
+        "package": "SKRools",
+        "repositoryURL": "https://github.com/cardona/SKRools.git",
+        "state": {
+          "branch": "develop",
+          "revision": "cacbf5d8b070776192f2db7bb5961e696d136f48",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
