@@ -61,7 +61,6 @@ final class DefaultForcesDetailViewModel: ForcesDetailViewModel {
                 DispatchQueue.main.async { self.items.value = forceDetail }
             case .failure(let error):
                 DispatchQueue.main.async { self.error.value = error }
-                print(error)
             }
             DispatchQueue.main.async { self.loadingStatus.value = .stop }
         }
