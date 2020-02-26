@@ -45,7 +45,10 @@ class ForcesDetailViewController: UIViewController, Storyboarded {
         })
 
         viewModel?.error.bind(listener: { (error) in
-            print("[Error] ViewController: \(error?.localizedDescription ?? "Undefined Error")")
+            guard let error = error else {
+                return
+            }
+            print("[Error] ViewController: \(error.localizedDescription)")
         })
     }
 
