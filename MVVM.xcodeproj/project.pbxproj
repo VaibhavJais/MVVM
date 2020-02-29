@@ -12,6 +12,12 @@
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
+		559C3A9C240A68FF006DB5B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9B240A68FF006DB5B5 /* MainViewController.swift */; };
+		559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */; };
+		559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */; };
+		559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */; };
+		559C3AA4240A69F6006DB5B5 /* MainList+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */; };
+		559C3AA6240A6A07006DB5B5 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA5240A6A07006DB5B5 /* MainRepository.swift */; };
 		55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */; };
 		55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */; };
 		55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */; };
@@ -59,6 +65,12 @@
 		5517D8302402F34400053260 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5517D8342402F34400053260 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559C3A9B240A68FF006DB5B5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMainListUseCase.swift; sourceTree = "<group>"; };
+		559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListEntity.swift; sourceTree = "<group>"; };
+		559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryProtocol.swift; sourceTree = "<group>"; };
+		559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainList+Decodable.swift"; sourceTree = "<group>"; };
+		559C3AA5240A6A07006DB5B5 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
 		55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesListUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesDetailUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcesDetailEngagementEntity.swift; sourceTree = "<group>"; };
@@ -156,6 +168,14 @@
 			path = MVVMTests;
 			sourceTree = "<group>";
 		};
+		559C3A9A240A68D6006DB5B5 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9B240A68FF006DB5B5 /* MainViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		55BFD5B2240324B600D9235A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +191,7 @@
 			children = (
 				55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */,
 				55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */,
+				559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -181,6 +202,7 @@
 				55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */,
 				55BFD5B8240324B600D9235A /* ForcesDetailEntity.swift */,
 				55BFD5B9240324B600D9235A /* ForcesEntity.swift */,
+				559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -189,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				55BFD5BB240324B700D9235A /* ForcesRepositoryProtocol.swift */,
+				559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -196,6 +219,7 @@
 		55BFD5BC240324B700D9235A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				559C3A9A240A68D6006DB5B5 /* MainView */,
 				55BFD5BD240324B700D9235A /* ForcesDetailView */,
 				55BFD5C6240324B700D9235A /* ForcesListView */,
 			);
@@ -298,6 +322,7 @@
 				55BFD5D4240324B700D9235A /* ForcesDetail+Decodable.swift */,
 				55BFD5D5240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift */,
 				55BFD5D6240324B700D9235A /* ForcesList+Decodable.swift */,
+				559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */,
 			);
 			path = Decodables;
 			sourceTree = "<group>";
@@ -306,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				55BFD5D8240324B700D9235A /* ForcesRepository.swift */,
+				559C3AA5240A6A07006DB5B5 /* MainRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -447,11 +473,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559C3AA6240A6A07006DB5B5 /* MainRepository.swift in Sources */,
 				55BFD5EC240324B700D9235A /* ForcesListViewModel.swift in Sources */,
 				55BFD5F6240324B700D9235A /* Constants.swift in Sources */,
+				559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */,
 				55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */,
 				55BFD5F8240324B700D9235A /* APIEndpoints.swift in Sources */,
 				55BFD5F3240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift in Sources */,
+				559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */,
 				55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */,
 				55BFD5F0240324B700D9235A /* ForcesListViewController.swift in Sources */,
 				55BFD5F7240324B700D9235A /* ForcesCoordinator.swift in Sources */,
@@ -459,8 +488,11 @@
 				55BFD5F2240324B700D9235A /* ForcesDetail+Decodable.swift in Sources */,
 				5517D81E2402F34100053260 /* AppDelegate.swift in Sources */,
 				55BFD5F4240324B700D9235A /* ForcesList+Decodable.swift in Sources */,
+				559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */,
 				55BFD5EA240324B700D9235A /* ForcesDetailViewController.swift in Sources */,
+				559C3AA4240A69F6006DB5B5 /* MainList+Decodable.swift in Sources */,
 				55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */,
+				559C3A9C240A68FF006DB5B5 /* MainViewController.swift in Sources */,
 				55BFD5F5240324B700D9235A /* ForcesRepository.swift in Sources */,
 				55BFD5ED240324B700D9235A /* ForcesListModel.swift in Sources */,
 				55BFD5E5240324B700D9235A /* ForcesEntity.swift in Sources */,
