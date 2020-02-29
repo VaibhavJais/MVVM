@@ -10,7 +10,7 @@
         <!--Main List View Controller-->
         <scene sceneID="vJH-RO-n7a">
             <objects>
-                <viewController id="hGw-oo-xpJ" customClass="MainListViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hGw-oo-xpJ" customClass="MainListViewController" customModule="MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XnY-BR-bP3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

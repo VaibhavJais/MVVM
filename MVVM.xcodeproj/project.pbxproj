@@ -14,6 +14,9 @@
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
 		555301A3240AACE200CF6297 /* DIMainListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A2240AACE200CF6297 /* DIMainListContainer.swift */; };
 		555301A5240AB09900CF6297 /* MainListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A4240AB09900CF6297 /* MainListCoordinator.swift */; };
+		555301AA240AB54A00CF6297 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A9240AB54A00CF6297 /* LocalService.swift */; };
+		555301AC240AB8C800CF6297 /* LocalConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301AB240AB8C800CF6297 /* LocalConfigurable.swift */; };
+		555301AE240AC53600CF6297 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301AD240AC53600CF6297 /* DIContainer.swift */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */; };
@@ -73,6 +76,9 @@
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555301A2240AACE200CF6297 /* DIMainListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIMainListContainer.swift; sourceTree = "<group>"; };
 		555301A4240AB09900CF6297 /* MainListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCoordinator.swift; sourceTree = "<group>"; };
+		555301A9240AB54A00CF6297 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
+		555301AB240AB8C800CF6297 /* LocalConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalConfigurable.swift; sourceTree = "<group>"; };
+		555301AD240AC53600CF6297 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMainListUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -178,6 +184,15 @@
 				5517D8362402F34400053260 /* Info.plist */,
 			);
 			path = MVVMTests;
+			sourceTree = "<group>";
+		};
+		555301A6240AB42D00CF6297 /* SKRools */ = {
+			isa = PBXGroup;
+			children = (
+				555301A9240AB54A00CF6297 /* LocalService.swift */,
+				555301AB240AB8C800CF6297 /* LocalConfigurable.swift */,
+			);
+			path = SKRools;
 			sourceTree = "<group>";
 		};
 		559C3A9A240A68D6006DB5B5 /* MainView */ = {
@@ -387,6 +402,7 @@
 		55BFD5D9240324B700D9235A /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				555301A6240AB42D00CF6297 /* SKRools */,
 				55BFD5DA240324B700D9235A /* Constants.swift */,
 				55BFD5DB240324B700D9235A /* Coordinator */,
 				55BFD5DD240324B700D9235A /* APIEndpoints.swift */,
@@ -410,6 +426,7 @@
 				55BFD5DF240324B700D9235A /* DIForcesContainer.swift */,
 				55BFD5E0240324B700D9235A /* DIAppContainer.swift */,
 				555301A2240AACE200CF6297 /* DIMainListContainer.swift */,
+				555301AD240AC53600CF6297 /* DIContainer.swift */,
 			);
 			path = "Services Locator";
 			sourceTree = "<group>";
@@ -547,13 +564,16 @@
 				559C3AA4240A69F6006DB5B5 /* MainList+Decodable.swift in Sources */,
 				55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */,
 				55BFD5F5240324B700D9235A /* ForcesRepository.swift in Sources */,
+				555301AE240AC53600CF6297 /* DIContainer.swift in Sources */,
 				559C3AB4240A857C006DB5B5 /* MainListViewController.swift in Sources */,
 				55BFD5ED240324B700D9235A /* ForcesListModel.swift in Sources */,
 				55BFD5E5240324B700D9235A /* ForcesEntity.swift in Sources */,
 				55BFD5F9240324B700D9235A /* DIForcesContainer.swift in Sources */,
 				559C3AAE240A787F006DB5B5 /* MainListModel.swift in Sources */,
 				55BFD5EE240324B700D9235A /* ForcesListTableViewCell.swift in Sources */,
+				555301AA240AB54A00CF6297 /* LocalService.swift in Sources */,
 				55BFD5E6240324B700D9235A /* ForcesRepositoryProtocol.swift in Sources */,
+				555301AC240AB8C800CF6297 /* LocalConfigurable.swift in Sources */,
 				55BFD5E4240324B700D9235A /* ForcesDetailEntity.swift in Sources */,
 				55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */,
 				55BFD5E7240324B700D9235A /* ForcesDetailViewModel.swift in Sources */,

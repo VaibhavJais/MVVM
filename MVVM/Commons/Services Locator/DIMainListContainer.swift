@@ -9,49 +9,52 @@
 import Foundation
 import SKRools
 
-final class DIMainListContainer {
+final class DIMainListContainer: SLContainer {
 
     // MARK: - Properties
-       private (set) var container: Container?
-       private let appContainer = DIAppContainer()
+    private (set) var container: Container?
 
-       // MARK: - LifeCycle
-       init() {
-           setup()
-       }
+    // MARK: - LifeCycle
+    override init() {
+        super.init()
+        setup()
+    }
 
-       private func setup() {
-           container = Container()
-               .register(MainListViewController.self) { resolve in
-                   return self.makeMainListView()
-           }
-       }
+    private func setup() {
+        container = Container()
+            .register(MainListViewController.self) { resolve in
+                return self.makeMainListView()
+        }
+    }
 }
 
 private extension DIMainListContainer {
     // MARK: - Common
-      private func makeDataTransferService() -> DataTransferService {
-          return appContainer.container.resolve(DataTransferService.self)
-      }
+    private func makeDataTransferService() -> DataTransferService {
+        let localService = makeLocalService()
+        let dataTranfer = DefaultDataTransferService(with: <#T##NetworkService#>)
 
-      // MARK: - Forces List
-      private func makeMainListRepository() -> MainRepository {
-          return DefaultMainRepository(dataTransferService: makeDataTransferService())
-      }
+        return dataTranfer
+    }
 
-      private func makeMainListUseCase() -> MainListUseCase {
-          return DefaultMainListUseCase(repository: makeMainListRepository())
-      }
+    // MARK: - Forces List
+    private func makeMainListRepository() -> MainRepository {
+        return DefaultMainRepository(dataTransferService: makeDataTransferService())
+    }
 
-      private func makeMainListViewModel() -> MainListViewModel {
-          return DefaultMainListViewModel(mainListUseCase: makeMainListUseCase())
-      }
+    private func makeMainListUseCase() -> MainListUseCase {
+        return DefaultMainListUseCase(repository: makeMainListRepository())
+    }
 
-      private func makeMainListView() -> MainListViewController {
+    private func makeMainListViewModel() -> MainListViewModel {
+        return DefaultMainListViewModel(mainListUseCase: makeMainListUseCase())
+    }
+
+    private func makeMainListView() -> MainListViewController {
         let viewController = MainListViewController.instantiate(storyboardName: Constants.mainListStoryboard)
-          viewController.viewModel = makeMainListViewModel()
+        viewController.viewModel = makeMainListViewModel()
         
-          return viewController
-      }
+        return viewController
+    }
 }
 
