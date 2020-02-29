@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import SKRools
+
+protocol MainListUseCase {
+    @discardableResult
+    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void ) -> Cancellable?
+}
+
+final class DefaultMainListUseCase: MainListUseCase {
+    private let repository: MainRepository
+
+    init(repository: MainRepository) {
+        self.repository = repository
+    }
+
+    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void) -> Cancellable? {
+        return repository.mainList(completion: completion)
+    }
+}

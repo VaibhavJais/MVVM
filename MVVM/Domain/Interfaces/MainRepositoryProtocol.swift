@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import SKRools
+
+protocol MainRepository {
+    @discardableResult
+    func mainList(completion: @escaping (Result<MainListEntity, Error>) -> Void) -> Cancellable?
+}
