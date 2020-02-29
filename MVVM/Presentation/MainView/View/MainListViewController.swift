@@ -14,7 +14,7 @@ class MainListViewController: UIViewController, Storyboarded {
     // MARK: - Properties
     private var items: [MainListModel]?
     var viewModel: MainListViewModel?
-    //weak var coordinator: MainListCoordinator?
+    weak var coordinator: MainListCoordinator?
 
     // MARK: - View LifeCycle
     override func viewDidLoad() {
