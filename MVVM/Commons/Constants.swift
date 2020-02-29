@@ -15,4 +15,7 @@ public enum Constants {
     static let forcesListEndpoint = "forces"
     static let forcesDetailEndpoint = "forces/"
     static let mainListEndpoint = "MainLocalData.json"
+
+    // MARK: - Storyboard Identifier
+    static let mainListStoryboard = "MainListStoryboard"
 }

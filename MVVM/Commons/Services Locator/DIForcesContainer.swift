@@ -30,43 +30,45 @@ final class DIForcesContainer {
             return self.makeForcesDetailView()
         }
     }
+}
 
+private extension DIForcesContainer {
     // MARK: - Common
-    private func makeDataTransferService() -> DataTransferService {
-        return appContainer.container.resolve(DataTransferService.self)
-    }
+      private func makeDataTransferService() -> DataTransferService {
+          return appContainer.container.resolve(DataTransferService.self)
+      }
 
-    // MARK: - Forces List
-    private func makeForcesListRepository() -> ForcesRepository {
-        return DefaultForcesRepository(dataTransferService: makeDataTransferService())
-    }
+      // MARK: - Forces List
+      private func makeForcesListRepository() -> ForcesRepository {
+          return DefaultForcesRepository(dataTransferService: makeDataTransferService())
+      }
 
-    private func makeForcesListUseCase() -> ForcesListUseCase {
-        return DefaultForcesListUseCase(forcesListRepository: makeForcesListRepository())
-    }
+      private func makeForcesListUseCase() -> ForcesListUseCase {
+          return DefaultForcesListUseCase(forcesListRepository: makeForcesListRepository())
+      }
 
-    private func makeForcesListViewModel() -> ForcesListViewModel {
-        return DefaultForcesListViewModel(forceListUseCase: makeForcesListUseCase())
-    }
+      private func makeForcesListViewModel() -> ForcesListViewModel {
+          return DefaultForcesListViewModel(forceListUseCase: makeForcesListUseCase())
+      }
 
-    private func makeForcesListView() -> ForcesListViewController {
-        let viewController = ForcesListViewController.instantiate(storyboardName: "Main")
-        viewController.viewModel = makeForcesListViewModel()
-        return viewController
-    }
+      private func makeForcesListView() -> ForcesListViewController {
+          let viewController = ForcesListViewController.instantiate(storyboardName: "Main")
+          viewController.viewModel = makeForcesListViewModel()
+          return viewController
+      }
 
-    // MARK: - Forces Detail
-    private func makeForcesDetailUseCase() -> ForcesDetailUseCase {
-        return DefaultForcesDetailUseCase(repository: makeForcesListRepository())
-    }
+      // MARK: - Forces Detail
+      private func makeForcesDetailUseCase() -> ForcesDetailUseCase {
+          return DefaultForcesDetailUseCase(repository: makeForcesListRepository())
+      }
 
-    private func makeForcesDetailViewModel() -> ForcesDetailViewModel {
-        return DefaultForcesDetailViewModel(forceDetailUseCase: makeForcesDetailUseCase())
-    }
+      private func makeForcesDetailViewModel() -> ForcesDetailViewModel {
+          return DefaultForcesDetailViewModel(forceDetailUseCase: makeForcesDetailUseCase())
+      }
 
-    private func makeForcesDetailView() -> ForcesDetailViewController {
-        let viewController = ForcesDetailViewController.instantiate(storyboardName: "ForcesDetailStoryboard")
-        viewController.viewModel = makeForcesDetailViewModel()
-        return viewController
-    }
+      private func makeForcesDetailView() -> ForcesDetailViewController {
+          let viewController = ForcesDetailViewController.instantiate(storyboardName: "ForcesDetailStoryboard")
+          viewController.viewModel = makeForcesDetailViewModel()
+          return viewController
+      }
 }

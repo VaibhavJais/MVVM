@@ -12,6 +12,7 @@
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
+		555301A3240AACE200CF6297 /* DIMainListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A2240AACE200CF6297 /* DIMainListContainer.swift */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */; };
@@ -69,6 +70,7 @@
 		5517D8302402F34400053260 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5517D8342402F34400053260 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555301A2240AACE200CF6297 /* DIMainListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIMainListContainer.swift; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMainListUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			children = (
 				55BFD5DF240324B700D9235A /* DIForcesContainer.swift */,
 				55BFD5E0240324B700D9235A /* DIAppContainer.swift */,
+				555301A2240AACE200CF6297 /* DIMainListContainer.swift */,
 			);
 			path = "Services Locator";
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */,
 				55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */,
 				55BFD5F0240324B700D9235A /* ForcesListViewController.swift in Sources */,
+				555301A3240AACE200CF6297 /* DIMainListContainer.swift in Sources */,
 				55BFD5F7240324B700D9235A /* ForcesCoordinator.swift in Sources */,
 				55BFD5E8240324B700D9235A /* ForcesDetailModel.swift in Sources */,
 				55BFD5F2240324B700D9235A /* ForcesDetail+Decodable.swift in Sources */,
