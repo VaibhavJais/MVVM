@@ -14,4 +14,5 @@ public enum Constants {
     // MARK: - Endpoints
     static let forcesListEndpoint = "forces"
     static let forcesDetailEndpoint = "forces/"
+    static let mainListEndpoint = "MainLocalData.json"
 }

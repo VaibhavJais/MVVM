@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MainListViewController.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
+class MainListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
 
 }

@@ -12,13 +12,16 @@
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
-		559C3A9C240A68FF006DB5B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9B240A68FF006DB5B5 /* MainViewController.swift */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */; };
 		559C3AA4240A69F6006DB5B5 /* MainList+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */; };
 		559C3AA6240A6A07006DB5B5 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA5240A6A07006DB5B5 /* MainRepository.swift */; };
 		559C3AA9240A6B09006DB5B5 /* MainLocalData.json in Resources */ = {isa = PBXBuildFile; fileRef = 559C3AA8240A6AFF006DB5B5 /* MainLocalData.json */; };
+		559C3AAE240A787F006DB5B5 /* MainListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AAD240A787F006DB5B5 /* MainListModel.swift */; };
+		559C3AB0240A788E006DB5B5 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AAF240A788E006DB5B5 /* MainListViewModel.swift */; };
+		559C3AB2240A8531006DB5B5 /* MainListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559C3AB1240A8531006DB5B5 /* MainListStoryboard.storyboard */; };
+		559C3AB4240A857C006DB5B5 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AB3240A857C006DB5B5 /* MainListViewController.swift */; };
 		55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */; };
 		55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */; };
 		55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */; };
@@ -66,13 +69,16 @@
 		5517D8302402F34400053260 /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5517D8342402F34400053260 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		559C3A9B240A68FF006DB5B5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMainListUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryProtocol.swift; sourceTree = "<group>"; };
 		559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainList+Decodable.swift"; sourceTree = "<group>"; };
 		559C3AA5240A6A07006DB5B5 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
 		559C3AA8240A6AFF006DB5B5 /* MainLocalData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainLocalData.json; sourceTree = "<group>"; };
+		559C3AAD240A787F006DB5B5 /* MainListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListModel.swift; sourceTree = "<group>"; };
+		559C3AAF240A788E006DB5B5 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
+		559C3AB1240A8531006DB5B5 /* MainListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainListStoryboard.storyboard; sourceTree = "<group>"; };
+		559C3AB3240A857C006DB5B5 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesListUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesDetailUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcesDetailEngagementEntity.swift; sourceTree = "<group>"; };
@@ -173,7 +179,9 @@
 		559C3A9A240A68D6006DB5B5 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				559C3A9B240A68FF006DB5B5 /* MainViewController.swift */,
+				559C3AAA240A77DE006DB5B5 /* Model */,
+				559C3AAB240A77EC006DB5B5 /* View */,
+				559C3AAC240A77F2006DB5B5 /* viewModel */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -184,6 +192,31 @@
 				559C3AA8240A6AFF006DB5B5 /* MainLocalData.json */,
 			);
 			path = LocalData;
+			sourceTree = "<group>";
+		};
+		559C3AAA240A77DE006DB5B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AAD240A787F006DB5B5 /* MainListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		559C3AAB240A77EC006DB5B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AB1240A8531006DB5B5 /* MainListStoryboard.storyboard */,
+				559C3AB3240A857C006DB5B5 /* MainListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		559C3AAC240A77F2006DB5B5 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AAF240A788E006DB5B5 /* MainListViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		55BFD5B2240324B600D9235A /* Domain */ = {
@@ -466,6 +499,7 @@
 				55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */,
 				55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */,
 				55BFD62624041B8700D9235A /* Main.storyboard in Resources */,
+				559C3AB2240A8531006DB5B5 /* MainListStoryboard.storyboard in Resources */,
 				5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */,
 				5517D8272402F34300053260 /* Assets.xcassets in Resources */,
 			);
@@ -504,17 +538,19 @@
 				55BFD5EA240324B700D9235A /* ForcesDetailViewController.swift in Sources */,
 				559C3AA4240A69F6006DB5B5 /* MainList+Decodable.swift in Sources */,
 				55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */,
-				559C3A9C240A68FF006DB5B5 /* MainViewController.swift in Sources */,
 				55BFD5F5240324B700D9235A /* ForcesRepository.swift in Sources */,
+				559C3AB4240A857C006DB5B5 /* MainListViewController.swift in Sources */,
 				55BFD5ED240324B700D9235A /* ForcesListModel.swift in Sources */,
 				55BFD5E5240324B700D9235A /* ForcesEntity.swift in Sources */,
 				55BFD5F9240324B700D9235A /* DIForcesContainer.swift in Sources */,
+				559C3AAE240A787F006DB5B5 /* MainListModel.swift in Sources */,
 				55BFD5EE240324B700D9235A /* ForcesListTableViewCell.swift in Sources */,
 				55BFD5E6240324B700D9235A /* ForcesRepositoryProtocol.swift in Sources */,
 				55BFD5E4240324B700D9235A /* ForcesDetailEntity.swift in Sources */,
 				55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */,
 				55BFD5E7240324B700D9235A /* ForcesDetailViewModel.swift in Sources */,
 				55BFD5E9240324B700D9235A /* ForcesDetailEngagementModel.swift in Sources */,
+				559C3AB0240A788E006DB5B5 /* MainListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
