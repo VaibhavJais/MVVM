@@ -30,16 +30,13 @@ final class DIMainListContainer: SLContainer {
 
 private extension DIMainListContainer {
     // MARK: - Common
-    private func makeDataTransferService() -> DataTransferService {
-        let localService = makeLocalService()
-        let dataTranfer = DefaultDataTransferService(with: <#T##NetworkService#>)
-
-        return dataTranfer
+    private func makeLocalDataTransferService() -> LocalDataTransferService {
+        return DefaultLocalDataTransferService(with: makeLocalService())
     }
 
     // MARK: - Forces List
     private func makeMainListRepository() -> MainRepository {
-        return DefaultMainRepository(dataTransferService: makeDataTransferService())
+        return DefaultMainRepository(localDataTransferService: makeLocalDataTransferService())
     }
 
     private func makeMainListUseCase() -> MainListUseCase {
@@ -53,7 +50,7 @@ private extension DIMainListContainer {
     private func makeMainListView() -> MainListViewController {
         let viewController = MainListViewController.instantiate(storyboardName: Constants.mainListStoryboard)
         viewController.viewModel = makeMainListViewModel()
-        
+
         return viewController
     }
 }

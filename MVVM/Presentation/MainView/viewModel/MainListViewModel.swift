@@ -15,9 +15,9 @@ protocol MainListViewModel: MainListViewModelInput, MainListViewModelOutput {}
 
 // MARK: - MainListViewModelInput Protocol
 protocol MainListViewModelInput {
-    var items: Box<[MainListModel]?> { get }
-    var loadingStatus: Box<LoadingStatus> { get }
-    var error: SKRError? { get }
+    var model: Box<MainListModel?> { get }
+    var loadingStatus: Box<LoadingStatus?> { get }
+    var error: Error? { get }
 }
 
 // MARK: - MainListViewModelOutput Protocol
@@ -31,12 +31,11 @@ final class DefaultMainListViewModel {
 
     // MARK: private properties
     private let mainListUseCase: MainListUseCase
-    private var mainListLoadTask: Cancellable? { willSet { mainListLoadTask?.cancel() } }
 
     // MARK: public propeties
-    let items: Box<[MainListModel]?> = Box(nil)
-    var error: SKRError?
-    var loadingStatus: Box<LoadingStatus> = Box(.stop)
+    let model: Box<MainListModel?> = Box(nil)
+    var error: Error?
+    var loadingStatus: Box<LoadingStatus?> = Box(nil)
 
     // MARK: lifeCycle methods
     init(mainListUseCase: MainListUseCase) {
@@ -53,7 +52,7 @@ extension DefaultMainListViewModel: MainListViewModel {
 
     func updateView() {
         self.loadingStatus.value = .start
-        mainListLoadTask = mainListUseCase.execute(completion: { [weak self] result  in
+        mainListUseCase.execute(completion: { [weak self] result  in
             switch result {
             case .success(let mainListEntity):
                 self?.updateViewSucces(mainListEntity: mainListEntity)
@@ -64,10 +63,8 @@ extension DefaultMainListViewModel: MainListViewModel {
     }
 
     private func updateViewSucces(mainListEntity: MainListEntity) {
-        let viewData = DefaultMainListModel(mainListEntity: mainListEntity)
-        print(viewData)
         DispatchQueue.main.async {
-            //self.items.value = viewData.items
+            self.model.value = DefaultMainListModel(mainListEntity: mainListEntity)
             self.loadingStatus.value = .stop
         }
     }

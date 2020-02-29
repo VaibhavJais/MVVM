@@ -10,18 +10,16 @@ import Foundation
 import SKRools
 
 final class DefaultMainRepository {
-    private let dataTransferService: DataTransferService
+    private let localDataTransferService: LocalDataTransferService
 
-       init(dataTransferService: DataTransferService) {
-           self.dataTransferService = dataTransferService
+       init(localDataTransferService: LocalDataTransferService) {
+           self.localDataTransferService = localDataTransferService
        }
 }
 
 extension DefaultMainRepository: MainRepository {
-    func mainList(completion: @escaping (Result<MainListEntity, Error>) -> Void) -> Cancellable? {
+    func mainList(completion: @escaping (Result<MainListEntity, Error>) -> Void) {
         let url = APIEndpoints.mainList()
-        let networkTask = self.dataTransferService.request(with: url, completion: completion)
-
-        return RepositoryTask(networkTask: networkTask)
+        localDataTransferService.localRequest(with: url, completion: completion)
     }
 }

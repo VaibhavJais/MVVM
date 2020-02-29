@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5512D0012404866F002546F1 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 5512D0002404866F002546F1 /* SKRools */; };
 		5517D81E2402F34100053260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D81D2402F34100053260 /* AppDelegate.swift */; };
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
 		555301A3240AACE200CF6297 /* DIMainListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A2240AACE200CF6297 /* DIMainListContainer.swift */; };
 		555301A5240AB09900CF6297 /* MainListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A4240AB09900CF6297 /* MainListCoordinator.swift */; };
-		555301AA240AB54A00CF6297 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A9240AB54A00CF6297 /* LocalService.swift */; };
-		555301AC240AB8C800CF6297 /* LocalConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301AB240AB8C800CF6297 /* LocalConfigurable.swift */; };
 		555301AE240AC53600CF6297 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301AD240AC53600CF6297 /* DIContainer.swift */; };
+		555301B1240AD25400CF6297 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 555301B0240AD25400CF6297 /* SKRools */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* MainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */; };
@@ -76,9 +74,8 @@
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555301A2240AACE200CF6297 /* DIMainListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIMainListContainer.swift; sourceTree = "<group>"; };
 		555301A4240AB09900CF6297 /* MainListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListCoordinator.swift; sourceTree = "<group>"; };
-		555301A9240AB54A00CF6297 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
-		555301AB240AB8C800CF6297 /* LocalConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalConfigurable.swift; sourceTree = "<group>"; };
 		555301AD240AC53600CF6297 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		555301AF240AD12100CF6297 /* SKRools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKRools; path = "../Swift Pakages/SKRools"; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMainListUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* MainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -122,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5512D0012404866F002546F1 /* SKRools in Frameworks */,
+				555301B1240AD25400CF6297 /* SKRools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +143,7 @@
 		5517D8112402F34100053260 = {
 			isa = PBXGroup;
 			children = (
+				555301AF240AD12100CF6297 /* SKRools */,
 				5517D81C2402F34100053260 /* MVVM */,
 				5517D8332402F34400053260 /* MVVMTests */,
 				5517D81B2402F34100053260 /* Products */,
@@ -184,15 +182,6 @@
 				5517D8362402F34400053260 /* Info.plist */,
 			);
 			path = MVVMTests;
-			sourceTree = "<group>";
-		};
-		555301A6240AB42D00CF6297 /* SKRools */ = {
-			isa = PBXGroup;
-			children = (
-				555301A9240AB54A00CF6297 /* LocalService.swift */,
-				555301AB240AB8C800CF6297 /* LocalConfigurable.swift */,
-			);
-			path = SKRools;
 			sourceTree = "<group>";
 		};
 		559C3A9A240A68D6006DB5B5 /* MainView */ = {
@@ -402,11 +391,10 @@
 		55BFD5D9240324B700D9235A /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				555301A6240AB42D00CF6297 /* SKRools */,
 				55BFD5DA240324B700D9235A /* Constants.swift */,
 				55BFD5DB240324B700D9235A /* Coordinator */,
 				55BFD5DD240324B700D9235A /* APIEndpoints.swift */,
-				55BFD5DE240324B700D9235A /* Services Locator */,
+				55BFD5DE240324B700D9235A /* ServicesLocator */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -420,7 +408,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		55BFD5DE240324B700D9235A /* Services Locator */ = {
+		55BFD5DE240324B700D9235A /* ServicesLocator */ = {
 			isa = PBXGroup;
 			children = (
 				55BFD5DF240324B700D9235A /* DIForcesContainer.swift */,
@@ -428,7 +416,7 @@
 				555301A2240AACE200CF6297 /* DIMainListContainer.swift */,
 				555301AD240AC53600CF6297 /* DIContainer.swift */,
 			);
-			path = "Services Locator";
+			path = ServicesLocator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,7 +436,7 @@
 			);
 			name = MVVM;
 			packageProductDependencies = (
-				5512D0002404866F002546F1 /* SKRools */,
+				555301B0240AD25400CF6297 /* SKRools */,
 			);
 			productName = MVVM;
 			productReference = 5517D81A2402F34100053260 /* MVVM.app */;
@@ -571,9 +559,7 @@
 				55BFD5F9240324B700D9235A /* DIForcesContainer.swift in Sources */,
 				559C3AAE240A787F006DB5B5 /* MainListModel.swift in Sources */,
 				55BFD5EE240324B700D9235A /* ForcesListTableViewCell.swift in Sources */,
-				555301AA240AB54A00CF6297 /* LocalService.swift in Sources */,
 				55BFD5E6240324B700D9235A /* ForcesRepositoryProtocol.swift in Sources */,
-				555301AC240AB8C800CF6297 /* LocalConfigurable.swift in Sources */,
 				55BFD5E4240324B700D9235A /* ForcesDetailEntity.swift in Sources */,
 				55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */,
 				55BFD5E7240324B700D9235A /* ForcesDetailViewModel.swift in Sources */,
@@ -858,9 +844,8 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5512D0002404866F002546F1 /* SKRools */ = {
+		555301B0240AD25400CF6297 /* SKRools */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5512CFFF2404866F002546F1 /* XCRemoteSwiftPackageReference "SKRools" */;
 			productName = SKRools;
 		};
 /* End XCSwiftPackageProductDependency section */

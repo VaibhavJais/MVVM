@@ -10,8 +10,7 @@ import Foundation
 import SKRools
 
 protocol MainListUseCase {
-    @discardableResult
-    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void ) -> Cancellable?
+    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void )
 }
 
 final class DefaultMainListUseCase: MainListUseCase {
@@ -21,7 +20,7 @@ final class DefaultMainListUseCase: MainListUseCase {
         self.repository = repository
     }
 
-    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void) -> Cancellable? {
-        return repository.mainList(completion: completion)
+    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void) {
+        repository.mainList(completion: completion)
     }
 }

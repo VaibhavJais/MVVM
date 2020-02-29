@@ -23,7 +23,7 @@ protocol ForcesListViewModelInput {
 protocol ForcesListViewModelOutput {
     var items: Box<[ForcesListModel]?> { get }
     var loadingStatus: Box<LoadingStatus> { get }
-    var error: SKRError? { get }
+    var error: Error? { get }
 }
 
 // MARK: - DefaultForcesListViewModel
@@ -31,7 +31,7 @@ final class DefaultForcesListViewModel {
     private let forcesListUseCase: ForcesListUseCase
     private var forcesLoadTask: Cancellable? { willSet { forcesLoadTask?.cancel() } }
     let items: Box<[ForcesListModel]?> = Box(nil)
-    var error: SKRError?
+    var error: Error?
     var loadingStatus: Box<LoadingStatus> = Box(.stop)
 
     @discardableResult

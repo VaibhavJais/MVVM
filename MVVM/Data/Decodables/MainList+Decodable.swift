@@ -10,13 +10,13 @@ import Foundation
 
 extension MainListEntity: Decodable {
 
-    private enum CondigKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case items
     }
 
     public init(from decoder: Decoder) throws {
-        let data = try decoder.singleValueContainer()
-        self.items = try data.decode([MainItemEntity].self)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.items = try (container.decodeIfPresent([MainItemEntity].self, forKey: .items) ?? [])
     }
 }
 

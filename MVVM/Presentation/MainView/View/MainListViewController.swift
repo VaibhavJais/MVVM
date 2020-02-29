@@ -12,7 +12,7 @@ import SKRools
 class MainListViewController: UIViewController, Storyboarded {
 
     // MARK: - Properties
-    private var items: [MainListModel]?
+    private var model: MainListModel?
     var viewModel: MainListViewModel?
     weak var coordinator: MainListCoordinator?
 
@@ -29,13 +29,22 @@ private extension MainListViewController {
 
     // MARK: - Binding
     private func setupBinding() {
-        viewModel?.items.bind(listener: { [unowned self]  (items) in
+        viewModel?.model.bind(listener: { [unowned self]  mainListModel in
+
             DispatchQueue.main.async {
-                self.items = items
+                self.model = mainListModel
+                guard let items = mainListModel?.items else {
+                    return
+                }
+                mainListModel?.items.map { print($0)}
+                _ = items.map { print($0.title ?? "")}
             }
         })
 
         viewModel?.loadingStatus.bind(listener: { (status) in
+            guard let status = status else {
+                return
+            }
             switch status {
             case .start:
                 print("[\(self.className())] Loading: Start")

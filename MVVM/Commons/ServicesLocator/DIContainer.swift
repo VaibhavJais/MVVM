@@ -14,9 +14,9 @@ class SLContainer {
     // MARK: - Local data
     func makeLocalService() -> LocalService {
         let logger = DefaultNetworkErrorLogger()
-        let localService = DefaultLocalService(logger: logger)
+        let bundle = Bundle.main
 
-        return localService
+        return DefaultLocalService(logger: logger, bundle: bundle)
     }
 
     // MARK: - Networking
