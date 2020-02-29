@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct MainListEntity {
+    var items: [MainItemEntity]
+}
+
+struct MainItemEntity {
+    var title: String?
+    var description: String?
+    var imageUrl: String?
+}
