@@ -18,6 +18,7 @@
 		559C3AA2240A69CF006DB5B5 /* MainRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */; };
 		559C3AA4240A69F6006DB5B5 /* MainList+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */; };
 		559C3AA6240A6A07006DB5B5 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA5240A6A07006DB5B5 /* MainRepository.swift */; };
+		559C3AA9240A6B09006DB5B5 /* MainLocalData.json in Resources */ = {isa = PBXBuildFile; fileRef = 559C3AA8240A6AFF006DB5B5 /* MainLocalData.json */; };
 		55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */; };
 		55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */; };
 		55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */; };
@@ -71,6 +72,7 @@
 		559C3AA1240A69CF006DB5B5 /* MainRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryProtocol.swift; sourceTree = "<group>"; };
 		559C3AA3240A69F6006DB5B5 /* MainList+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainList+Decodable.swift"; sourceTree = "<group>"; };
 		559C3AA5240A6A07006DB5B5 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		559C3AA8240A6AFF006DB5B5 /* MainLocalData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MainLocalData.json; sourceTree = "<group>"; };
 		55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesListUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesDetailUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcesDetailEngagementEntity.swift; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 				559C3A9B240A68FF006DB5B5 /* MainViewController.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		559C3AA7240A6ABD006DB5B5 /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA8240A6AFF006DB5B5 /* MainLocalData.json */,
+			);
+			path = LocalData;
 			sourceTree = "<group>";
 		};
 		55BFD5B2240324B600D9235A /* Domain */ = {
@@ -310,6 +320,7 @@
 		55BFD5D2240324B700D9235A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				559C3AA7240A6ABD006DB5B5 /* LocalData */,
 				55BFD5D3240324B700D9235A /* Decodables */,
 				55BFD5D7240324B700D9235A /* Repositories */,
 			);
@@ -451,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559C3AA9240A6B09006DB5B5 /* MainLocalData.json in Resources */,
 				55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */,
 				55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */,
 				55BFD62624041B8700D9235A /* Main.storyboard in Resources */,
