@@ -9,10 +9,10 @@
 import Foundation
 import SKRools
 
-// MARK: - Main Endpoints
+// MARK: - Home Endpoints
 struct APIEndpoints {
-    static func mainList() -> Endpoint<MainListEntity> {
-        return Endpoint(path: Constants.mainListEndpoint)
+    static func homeList() -> Endpoint<HomeEntity> {
+        return Endpoint(path: Constants.homeListEndpoint)
     }
 }
 

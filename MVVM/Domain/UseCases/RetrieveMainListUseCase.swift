@@ -1,5 +1,5 @@
 //
-//  RetrieveMainListUseCase.swift
+//  RetrieveHomeUseCase.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -9,18 +9,18 @@
 import Foundation
 import SKRools
 
-protocol MainListUseCase {
-    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void )
+protocol HomeUseCase {
+    func execute(completion: @escaping (Result<HomeEntity, Error>) -> Void )
 }
 
-final class DefaultMainListUseCase: MainListUseCase {
-    private let repository: MainRepository
+final class DefaultHomeUseCase: HomeUseCase {
+    private let repository: HomeRepository
 
-    init(repository: MainRepository) {
+    init(repository: HomeRepository) {
         self.repository = repository
     }
 
-    func execute(completion: @escaping (Result<MainListEntity, Error>) -> Void) {
-        repository.mainList(completion: completion)
+    func execute(completion: @escaping (Result<HomeEntity, Error>) -> Void) {
+        repository.homeItems(completion: completion)
     }
 }

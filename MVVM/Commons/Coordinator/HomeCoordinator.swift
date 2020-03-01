@@ -1,5 +1,5 @@
 //
-//  MainListCoordinator.swift
+//  HomeCoordinator.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 import SKRools
 
-class MainListCoordinator: Coordinator {
+class HomeCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    private let container: DIMainListContainer = DIMainListContainer()
+    private let container: SLHomeContainer = SLHomeContainer()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
     func start() {
-        guard let vc = container.container?.resolve(MainListViewController.self) else {
+        guard let vc = container.container?.resolve(HomeViewController.self) else {
             // TODO error
             return
         }

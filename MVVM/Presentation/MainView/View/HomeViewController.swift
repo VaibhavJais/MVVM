@@ -1,5 +1,5 @@
 //
-//  MainListViewController.swift
+//  HomeViewController.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -9,12 +9,12 @@
 import UIKit
 import SKRools
 
-class MainListViewController: UIViewController, Storyboarded {
+class HomeViewController: UIViewController, Storyboarded {
 
     // MARK: - Properties
-    private var model: MainListModel?
-    var viewModel: MainListViewModel?
-    weak var coordinator: MainListCoordinator?
+    private var model: HomeModel?
+    var viewModel: HomeViewModel?
+    weak var coordinator: HomeCoordinator?
 
     // MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -25,18 +25,18 @@ class MainListViewController: UIViewController, Storyboarded {
     }
 }
 
-private extension MainListViewController {
+private extension HomeViewController {
 
     // MARK: - Binding
     private func setupBinding() {
-        viewModel?.model.bind(listener: { [unowned self]  mainListModel in
+        viewModel?.model.bind(listener: { [unowned self]  homeModel in
 
             DispatchQueue.main.async {
-                self.model = mainListModel
-                guard let items = mainListModel?.items else {
+                self.model = homeModel
+                guard let items = homeModel?.items else {
                     return
                 }
-                mainListModel?.items.map { print($0)}
+                homeModel?.items.map { print($0)}
                 _ = items.map { print($0.title ?? "")}
             }
         })
@@ -59,6 +59,6 @@ private extension MainListViewController {
     }
 
     private func className() -> String {
-        return String(describing: ForcesListViewModel.self)
+        return String(describing: self.self)
     }
 }

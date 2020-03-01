@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  ForcesCoordinator.swift
 //  Pattern MVVM
 //
 //  Created by Oscar Cardona on 21/02/2020.

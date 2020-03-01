@@ -1,5 +1,5 @@
 //
-//  MainListEntity.swift
+//  HomeEntity.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct MainListEntity {
-    var items: [MainItemEntity]
+struct HomeEntity {
+    var items: [HomeItemEntity]
 }
 
-struct MainItemEntity {
+struct HomeItemEntity {
     var title: String?
     var description: String?
     var imageUrl: String?

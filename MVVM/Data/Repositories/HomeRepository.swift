@@ -1,5 +1,5 @@
 //
-//  MainRepository.swift
+//  HomeRepository.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -9,7 +9,7 @@
 import Foundation
 import SKRools
 
-final class DefaultMainRepository {
+final class DefaultHomeRepository {
     private let localDataTransferService: LocalDataTransferService
 
        init(localDataTransferService: LocalDataTransferService) {
@@ -17,9 +17,9 @@ final class DefaultMainRepository {
        }
 }
 
-extension DefaultMainRepository: MainRepository {
-    func mainList(completion: @escaping (Result<MainListEntity, Error>) -> Void) {
-        let url = APIEndpoints.mainList()
+extension DefaultHomeRepository: HomeRepository {
+    func homeItems(completion: @escaping (Result<HomeEntity, Error>) -> Void) {
+        let url = APIEndpoints.homeList()
         localDataTransferService.localRequest(with: url, completion: completion)
     }
 }

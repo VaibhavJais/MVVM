@@ -1,5 +1,5 @@
 //
-//  MainRepositoryProtocol.swift
+//  HomeRepositoryProtocol.swift
 //  MVVM
 //
 //  Created by Oscar Cardona on 29/02/2020.
@@ -9,6 +9,6 @@
 import Foundation
 import SKRools
 
-protocol MainRepository {
-    func mainList(completion: @escaping (Result<MainListEntity, Error>) -> Void)
+protocol HomeRepository {
+    func homeItems(completion: @escaping (Result<HomeEntity, Error>) -> Void)
 }
