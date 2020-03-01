@@ -18,4 +18,6 @@ public enum Constants {
 
     // MARK: - Storyboard Identifier
     static let homeStoryboard = "HomeStoryboard"
+    static let forcesListStoryboard = "Main"
+    static let forcesDetailStoryboard = "ForcesDetailStoryboard"
 }

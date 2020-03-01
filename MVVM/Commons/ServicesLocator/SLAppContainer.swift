@@ -1,16 +1,16 @@
 //
-//  DIAppContainer.swift
-//  Pattern MVVM
+//  SLAppContainer.swift
+//  MVVM
 //
-//  Created by Oscar Cardona on 23/02/2020.
+//  Created by Oscar Cardona on 01/03/2020.
 //  Copyright © 2020 Cardona.tv. All rights reserved.
 //
 
 import Foundation
 import SKRools
 
-//MARK: - DIAppContainer
-final class DIAppContainer {
+//MARK: - SLAppContainer
+final class SLAppContainer {
 
     // MARK: - Properties
     private (set) var container: Container

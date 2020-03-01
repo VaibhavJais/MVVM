@@ -1,20 +1,20 @@
 //
-//  DIForcesContainer.swift
-//  Pattern MVVM
+//  SLForcesContainer.swift
+//  MVVM
 //
-//  Created by Oscar Cardona on 23/02/2020.
+//  Created by Oscar Cardona on 01/03/2020.
 //  Copyright © 2020 Cardona.tv. All rights reserved.
 //
 
 import Foundation
 import SKRools
 
-// MARK: - DIForcesContainer
-final class DIForcesContainer {
+// MARK: - SLForcesContainer
+final class SLForcesContainer {
 
     // MARK: - Properties
     private (set) var container: Container?
-    private let appContainer = DIAppContainer()
+    private let appContainer = SLAppContainer()
 
     // MARK: - LifeCycle
     init() {
@@ -32,7 +32,7 @@ final class DIForcesContainer {
     }
 }
 
-private extension DIForcesContainer {
+private extension SLForcesContainer {
     // MARK: - Common
       private func makeDataTransferService() -> DataTransferService {
           return appContainer.container.resolve(DataTransferService.self)
@@ -52,7 +52,7 @@ private extension DIForcesContainer {
       }
 
       private func makeForcesListView() -> ForcesListViewController {
-          let viewController = ForcesListViewController.instantiate(storyboardName: "Main")
+        let viewController = ForcesListViewController.instantiate(storyboardName: Constants.forcesListStoryboard)
           viewController.viewModel = makeForcesListViewModel()
           return viewController
       }
@@ -67,7 +67,7 @@ private extension DIForcesContainer {
       }
 
       private func makeForcesDetailView() -> ForcesDetailViewController {
-          let viewController = ForcesDetailViewController.instantiate(storyboardName: "ForcesDetailStoryboard")
+        let viewController = ForcesDetailViewController.instantiate(storyboardName: Constants.forcesDetailStoryboard)
           viewController.viewModel = makeForcesDetailViewModel()
           return viewController
       }

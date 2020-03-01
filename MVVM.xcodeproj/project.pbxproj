@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5517915A240BABF10050E79A /* SLHomeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55179159240BABF10050E79A /* SLHomeContainer.swift */; };
+		5517915C240BAED50050E79A /* SLForcesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915B240BAED50050E79A /* SLForcesContainer.swift */; };
+		5517915E240BAF8A0050E79A /* SLContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915D240BAF8A0050E79A /* SLContainer.swift */; };
+		55179160240BAFB60050E79A /* SLAppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915F240BAFB60050E79A /* SLAppContainer.swift */; };
 		5517D81E2402F34100053260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D81D2402F34100053260 /* AppDelegate.swift */; };
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
 		555301A5240AB09900CF6297 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A4240AB09900CF6297 /* HomeCoordinator.swift */; };
-		555301AE240AC53600CF6297 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301AD240AC53600CF6297 /* DIContainer.swift */; };
 		555301B1240AD25400CF6297 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 555301B0240AD25400CF6297 /* SKRools */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */; };
@@ -46,8 +48,6 @@
 		55BFD5F6240324B700D9235A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5DA240324B700D9235A /* Constants.swift */; };
 		55BFD5F7240324B700D9235A /* ForcesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5DC240324B700D9235A /* ForcesCoordinator.swift */; };
 		55BFD5F8240324B700D9235A /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5DD240324B700D9235A /* APIEndpoints.swift */; };
-		55BFD5F9240324B700D9235A /* DIForcesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5DF240324B700D9235A /* DIForcesContainer.swift */; };
-		55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5E0240324B700D9235A /* DIAppContainer.swift */; };
 		55BFD62624041B8700D9235A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5D0240324B700D9235A /* Main.storyboard */; };
 		55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5CE240324B700D9235A /* ForcesListTableViewCell.xib */; };
 		55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5C5240324B700D9235A /* ForcesDetailStoryboard.storyboard */; };
@@ -65,6 +65,9 @@
 
 /* Begin PBXFileReference section */
 		55179159240BABF10050E79A /* SLHomeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLHomeContainer.swift; sourceTree = "<group>"; };
+		5517915B240BAED50050E79A /* SLForcesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLForcesContainer.swift; sourceTree = "<group>"; };
+		5517915D240BAF8A0050E79A /* SLContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLContainer.swift; sourceTree = "<group>"; };
+		5517915F240BAFB60050E79A /* SLAppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLAppContainer.swift; sourceTree = "<group>"; };
 		5517D81A2402F34100053260 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5517D81D2402F34100053260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5517D8262402F34300053260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		5517D8342402F34400053260 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555301A4240AB09900CF6297 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		555301AD240AC53600CF6297 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		555301AF240AD12100CF6297 /* SKRools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKRools; path = "../Swift Pakages/SKRools"; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHomeUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
@@ -110,8 +112,6 @@
 		55BFD5DA240324B700D9235A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55BFD5DC240324B700D9235A /* ForcesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcesCoordinator.swift; sourceTree = "<group>"; };
 		55BFD5DD240324B700D9235A /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
-		55BFD5DF240324B700D9235A /* DIForcesContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIForcesContainer.swift; sourceTree = "<group>"; };
-		55BFD5E0240324B700D9235A /* DIAppContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIAppContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,10 +411,10 @@
 		55BFD5DE240324B700D9235A /* ServicesLocator */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5DF240324B700D9235A /* DIForcesContainer.swift */,
-				55BFD5E0240324B700D9235A /* DIAppContainer.swift */,
-				555301AD240AC53600CF6297 /* DIContainer.swift */,
 				55179159240BABF10050E79A /* SLHomeContainer.swift */,
+				5517915B240BAED50050E79A /* SLForcesContainer.swift */,
+				5517915D240BAF8A0050E79A /* SLContainer.swift */,
+				5517915F240BAFB60050E79A /* SLAppContainer.swift */,
 			);
 			path = ServicesLocator;
 			sourceTree = "<group>";
@@ -540,8 +540,11 @@
 				55BFD5F8240324B700D9235A /* APIEndpoints.swift in Sources */,
 				55BFD5F3240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift in Sources */,
 				559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */,
+				5517915E240BAF8A0050E79A /* SLContainer.swift in Sources */,
+				5517915C240BAED50050E79A /* SLForcesContainer.swift in Sources */,
 				55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */,
 				55BFD5F0240324B700D9235A /* ForcesListViewController.swift in Sources */,
+				55179160240BAFB60050E79A /* SLAppContainer.swift in Sources */,
 				55BFD5F7240324B700D9235A /* ForcesCoordinator.swift in Sources */,
 				55BFD5E8240324B700D9235A /* ForcesDetailModel.swift in Sources */,
 				55BFD5F2240324B700D9235A /* ForcesDetail+Decodable.swift in Sources */,
@@ -550,13 +553,10 @@
 				559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */,
 				55BFD5EA240324B700D9235A /* ForcesDetailViewController.swift in Sources */,
 				559C3AA4240A69F6006DB5B5 /* Home+Decodable.swift in Sources */,
-				55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */,
 				55BFD5F5240324B700D9235A /* ForcesRepository.swift in Sources */,
-				555301AE240AC53600CF6297 /* DIContainer.swift in Sources */,
 				559C3AB4240A857C006DB5B5 /* HomeViewController.swift in Sources */,
 				55BFD5ED240324B700D9235A /* ForcesListModel.swift in Sources */,
 				55BFD5E5240324B700D9235A /* ForcesEntity.swift in Sources */,
-				55BFD5F9240324B700D9235A /* DIForcesContainer.swift in Sources */,
 				559C3AAE240A787F006DB5B5 /* HomeModel.swift in Sources */,
 				55BFD5EE240324B700D9235A /* ForcesListTableViewCell.swift in Sources */,
 				55BFD5E6240324B700D9235A /* ForcesRepositoryProtocol.swift in Sources */,

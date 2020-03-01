@@ -12,7 +12,7 @@ import SKRools
 class ForcesCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    private let containerForces: DIForcesContainer = DIForcesContainer()
+    private let containerForces: SLForcesContainer = SLForcesContainer()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
