@@ -13,6 +13,7 @@ struct HomeEntity {
 }
 
 struct HomeItemEntity {
+    var id: String?
     var title: String?
     var description: String?
     var imageName: String?

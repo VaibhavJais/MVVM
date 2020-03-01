@@ -37,8 +37,8 @@ class HomeViewController: UIViewController, Storyboarded {
         lbl.font = UIFont(name: "Verdana-bold", size: 30)
         lbl.backgroundColor = .clear
         lbl.textAlignment = .center
-        lbl.numberOfLines = 2
-
+        lbl.numberOfLines = 1
+        
         return lbl
     }()
 
@@ -99,6 +99,22 @@ private extension HomeViewController {
 // MARK: - UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let item = self.model?.items?[indexPath.row],
+            let identifier = item.id else {
+            return
+        }
+
+        print(identifier)
+
+        switch identifier {
+        case "policeId":
+            print("POLICE")
+        default:
+            print("Default")
+        }
+
+    }
 }
 
 // MARK: - UICollectionViewDataSource

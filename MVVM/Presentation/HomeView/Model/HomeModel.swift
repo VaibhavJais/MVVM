@@ -32,6 +32,7 @@ protocol HomeItemModel: HomeItemModelOutput {}
 
 // MARK: - HomeItemModelOutput Protocol
 protocol HomeItemModelOutput {
+    var id: String? { get }
     var title: String? { get }
     var description: String? { get }
     var imageName: String? { get }
@@ -39,11 +40,13 @@ protocol HomeItemModelOutput {
 
 // MARK: - DefaultHomeItemModel
 struct DefaultHomeItemModel: HomeItemModel {
+    var id: String?
     var title: String?
     var description: String?
     var imageName: String?
 
     init(homeItemEntity: HomeItemEntity) {
+        self.id = homeItemEntity.id
         self.title = homeItemEntity.title
         self.description = homeItemEntity.description
         self.imageName = homeItemEntity.imageName

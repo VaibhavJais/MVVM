@@ -22,6 +22,7 @@ extension HomeEntity: Decodable {
 
 extension HomeItemEntity: Decodable {
     private enum CodingKeys: String, CodingKey {
+        case id
         case title
         case description
         case imageName
@@ -29,6 +30,7 @@ extension HomeItemEntity: Decodable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decodeIfPresent(String.self, forKey: .id)
         self.title = try container.decodeIfPresent(String.self, forKey: .title)
         self.description = try container.decodeIfPresent(String.self, forKey: .description)
         self.imageName = try container.decodeIfPresent(String.self, forKey: .imageName)
