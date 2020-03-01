@@ -184,14 +184,14 @@
 			path = MVVMTests;
 			sourceTree = "<group>";
 		};
-		559C3A9A240A68D6006DB5B5 /* MainView */ = {
+		559C3A9A240A68D6006DB5B5 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				559C3AAA240A77DE006DB5B5 /* Model */,
 				559C3AAB240A77EC006DB5B5 /* View */,
 				559C3AAC240A77F2006DB5B5 /* viewModel */,
 			);
-			path = MainView;
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		559C3AA7240A6ABD006DB5B5 /* LocalData */ = {
@@ -270,7 +270,7 @@
 		55BFD5BC240324B700D9235A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				559C3A9A240A68D6006DB5B5 /* MainView */,
+				559C3A9A240A68D6006DB5B5 /* HomeView */,
 				55BFD5BD240324B700D9235A /* ForcesDetailView */,
 				55BFD5C6240324B700D9235A /* ForcesListView */,
 			);
