@@ -15,7 +15,7 @@
 		555301A5240AB09900CF6297 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A4240AB09900CF6297 /* HomeCoordinator.swift */; };
 		555301AE240AC53600CF6297 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301AD240AC53600CF6297 /* DIContainer.swift */; };
 		555301B1240AD25400CF6297 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 555301B0240AD25400CF6297 /* SKRools */; };
-		559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */; };
+		559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */; };
 		559C3AA4240A69F6006DB5B5 /* Home+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA3240A69F6006DB5B5 /* Home+Decodable.swift */; };
@@ -76,7 +76,7 @@
 		555301A4240AB09900CF6297 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		555301AD240AC53600CF6297 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		555301AF240AD12100CF6297 /* SKRools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKRools; path = "../Swift Pakages/SKRools"; sourceTree = "<group>"; };
-		559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMainListUseCase.swift; sourceTree = "<group>"; };
+		559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHomeUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		559C3AA3240A69F6006DB5B5 /* Home+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Decodable.swift"; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			children = (
 				55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */,
 				55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */,
-				559C3A9D240A6979006DB5B5 /* RetrieveMainListUseCase.swift */,
+				559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -392,8 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				55BFD5DA240324B700D9235A /* Constants.swift */,
-				55BFD5DB240324B700D9235A /* Coordinator */,
 				55BFD5DD240324B700D9235A /* APIEndpoints.swift */,
+				55BFD5DB240324B700D9235A /* Coordinator */,
 				55BFD5DE240324B700D9235A /* ServicesLocator */,
 			);
 			path = Commons;
@@ -547,7 +547,7 @@
 				55BFD5F2240324B700D9235A /* ForcesDetail+Decodable.swift in Sources */,
 				5517D81E2402F34100053260 /* AppDelegate.swift in Sources */,
 				55BFD5F4240324B700D9235A /* ForcesList+Decodable.swift in Sources */,
-				559C3A9E240A6979006DB5B5 /* RetrieveMainListUseCase.swift in Sources */,
+				559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */,
 				55BFD5EA240324B700D9235A /* ForcesDetailViewController.swift in Sources */,
 				559C3AA4240A69F6006DB5B5 /* Home+Decodable.swift in Sources */,
 				55BFD5FA240324B700D9235A /* DIAppContainer.swift in Sources */,
