@@ -18,6 +18,7 @@ private struct ForcesListViewControllerConstants {
 
 // MARK: - ForceListViewController
 final class ForcesListViewController: UIViewController, Storyboarded {
+
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     private var items: [ForcesListModel]?
@@ -30,6 +31,11 @@ final class ForcesListViewController: UIViewController, Storyboarded {
         setupView()
         setupBinding()
         viewModel?.viewDidLoad()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("Forces LIST viewDidDisappear")
     }
 
     // MARK: - Binding
@@ -52,6 +58,8 @@ final class ForcesListViewController: UIViewController, Storyboarded {
     }
 
     private func setupView() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        tableView.backgroundColor = .white
         tableView.register(UINib(nibName: ForcesListViewControllerConstants.cellNibName,
                                  bundle: nil),
                            forCellReuseIdentifier: ForcesListViewControllerConstants.cellIdentifier)

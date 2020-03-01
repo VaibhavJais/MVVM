@@ -14,13 +14,16 @@ final class SLForcesContainer {
 
     // MARK: - Properties
     private (set) var container: Container?
-    private let appContainer = SLAppContainer()
+    private let appContainer: SLAppContainer
 
     // MARK: - LifeCycle
-    init() {
+    init(appContainer: SLAppContainer = SLAppContainer()) {
+        self.appContainer = appContainer
         setup()
     }
-
+    deinit{
+        container = nil
+    }
     private func setup() {
         container = Container()
             .register(ForcesListViewController.self) { resolve in

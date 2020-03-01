@@ -9,7 +9,12 @@
 import UIKit
 import SKRools
 
-class ForcesCoordinator: Coordinator {
+protocol ForcesCoordinatorProtocol {
+    func forcesList()
+}
+
+final class ForcesCoordinator: Coordinator {
+    weak var parentCoordinator: HomeCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     private let containerForces: SLForcesContainer = SLForcesContainer()

@@ -6,11 +6,11 @@
 //  Copyright © 2020 Cardona.tv. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SKRools
 
-class HomeCoordinator: Coordinator {
+class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
+
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     private let container: SLHomeContainer = SLHomeContainer()
@@ -24,9 +24,44 @@ class HomeCoordinator: Coordinator {
             // TODO error
             return
         }
-        vc.coordinator = self
+
+        vc.forcesList = { [weak self] in
+            self?.forcesSubscription()
+        }
+
+        navigationController.delegate = self
         navigationController.pushViewController(vc, animated: false)
     }
 
+    func forcesSubscription() {
+        let child = ForcesCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in
+            childCoordinators.enumerated() {
+                if coordinator === child {
+                    childCoordinators.remove(at: index)
+                    break
+                }
+        }
+    }
+
+    func navigationController(_ navigationController: UINavigationController,
+                              didShow viewController: UIViewController,
+                              animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+        if  navigationController.viewControllers.contains(fromViewController) {
+            return
+        }
+        if let forcesViewController = fromViewController as? ForcesListViewController {
+            childDidFinish(forcesViewController.coordinator)
+        }
+    }
 }
 

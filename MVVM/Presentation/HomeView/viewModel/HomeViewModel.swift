@@ -13,17 +13,18 @@ import SKRools
 protocol HomeViewModel: HomeViewModelInput, HomeViewModelOutput {}
 
 
-// MARK: - HomeViewModelInput Protocol
-protocol HomeViewModelInput {
+// MARK: - HomeViewModelOutput Protocol
+protocol HomeViewModelOutput {
     var model: Box<HomeModel?> { get }
     var loadingStatus: Box<LoadingStatus?> { get }
     var error: Error? { get }
 }
 
-// MARK: - HomeViewModelOutput Protocol
-protocol HomeViewModelOutput {
+// MARK: - HomeViewModelInput Protocol
+protocol HomeViewModelInput {
     func viewDidLoad()
     func updateView()
+    func showItemDetail(indexPath: IndexPath, coordinator: ForcesCoordinator?)
 }
 
 // MARK: - DefaultHomeistViewModel
@@ -46,10 +47,12 @@ final class DefaultHomeViewModel {
 // MARK: - HomeViewModel
 extension DefaultHomeViewModel: HomeViewModel {
 
+    // MARK: View lifeCycle
     func viewDidLoad() {
         updateView()
     }
 
+    // MARK: Update View
     func updateView() {
         self.loadingStatus.value = .start
         homeUseCase.execute(completion: { [weak self] result  in
@@ -77,3 +80,11 @@ extension DefaultHomeViewModel: HomeViewModel {
      }
 }
 
+// MARK: - User Actions
+extension HomeViewModel {
+    
+    // MARK: Show Netx View
+    func showItemDetail(indexPath: IndexPath, coordinator: ForcesCoordinator?) {
+
+    }
+}

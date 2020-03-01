@@ -20,7 +20,8 @@ class HomeViewController: UIViewController, Storyboarded {
     // MARK: - Properties
     private var model: HomeModel?
     var viewModel: HomeViewModel?
-    weak var coordinator: HomeCoordinator?
+    var forcesList: (() -> Void)?
+
 
     // MARK: - IBOutlets
     private let collectionView: UICollectionView = {
@@ -35,10 +36,12 @@ class HomeViewController: UIViewController, Storyboarded {
     private let titleLbl: UILabel = {
         let lbl = UILabel(frame: .zero)
         lbl.font = UIFont(name: "Verdana-bold", size: 30)
-        lbl.backgroundColor = .clear
+        lbl.backgroundColor = .lightGray
         lbl.textAlignment = .center
         lbl.numberOfLines = 1
-        
+        lbl.textColor = .black
+        lbl.adjustsFontSizeToFitWidth = true
+
         return lbl
     }()
 
@@ -49,13 +52,17 @@ class HomeViewController: UIViewController, Storyboarded {
         setupBinding()
         viewModel?.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 }
 
 private extension HomeViewController {
 
     // MARK: - Setup View
     private func setupView() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         view.addSubview(titleLbl)
         setupTitleConstraints()
         collectionView.register(UINib(nibName: Constants.cellName,
@@ -72,7 +79,6 @@ private extension HomeViewController {
         viewModel?.model.bind(listener: { [unowned self]  homeModel in
             DispatchQueue.main.async {
                 self.model = homeModel
-
                 self.titleLbl.text = "HomeViewController"
                 self.collectionView.reloadData()
             }
@@ -105,11 +111,13 @@ extension HomeViewController: UICollectionViewDelegate {
             return
         }
 
-        print(identifier)
-
         switch identifier {
         case "policeId":
-            print("POLICE")
+            forcesList?()
+        case "beerId":
+            print("BEER")
+        case "settingsId":
+            print("SETTINGS")
         default:
             print("Default")
         }
@@ -138,7 +146,7 @@ extension HomeViewController: UICollectionViewDataSource {
 private extension HomeViewController {
     private func setupCollectionConstraints() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.topAnchor.constraint(equalTo: titleLbl.bottomAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: titleLbl.bottomAnchor, constant: 20).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -146,9 +154,9 @@ private extension HomeViewController {
 
     private func setupTitleConstraints() {
         titleLbl.translatesAutoresizingMaskIntoConstraints = false
-        titleLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 60.0).isActive = true
+        titleLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 30.0).isActive = true
         titleLbl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20.0).isActive = true
         titleLbl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20.0).isActive = true
-        titleLbl.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
+        titleLbl.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 }
