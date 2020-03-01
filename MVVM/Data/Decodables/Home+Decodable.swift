@@ -24,13 +24,13 @@ extension HomeItemEntity: Decodable {
     private enum CodingKeys: String, CodingKey {
         case title
         case description
-        case imageUrl
+        case imageName
     }
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.title = try container.decodeIfPresent(String.self, forKey: .title)
         self.description = try container.decodeIfPresent(String.self, forKey: .description)
-        self.imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
+        self.imageName = try container.decodeIfPresent(String.self, forKey: .imageName)
     }
 }

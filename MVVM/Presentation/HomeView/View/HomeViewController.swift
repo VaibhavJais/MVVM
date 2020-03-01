@@ -11,10 +11,36 @@ import SKRools
 
 class HomeViewController: UIViewController, Storyboarded {
 
+    // MARK: Private Constants
+    private struct Constants {
+        static let cellIdentifier = "HomeCollectionViewCellID"
+        static let cellName = "HomeCollectionViewCell"
+    }
+
     // MARK: - Properties
     private var model: HomeModel?
     var viewModel: HomeViewModel?
     weak var coordinator: HomeCoordinator?
+
+    // MARK: - IBOutlets
+    private let collectionView: UICollectionView = {
+        let layout = HomeCollectionViewLayout()
+        layout.scrollDirection = .vertical
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .white
+
+        return cv
+    }()
+
+    private let titleLbl: UILabel = {
+        let lbl = UILabel(frame: .zero)
+        lbl.font = UIFont(name: "Verdana-bold", size: 30)
+        lbl.backgroundColor = .clear
+        lbl.textAlignment = .center
+        lbl.numberOfLines = 2
+
+        return lbl
+    }()
 
     // MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -27,17 +53,28 @@ class HomeViewController: UIViewController, Storyboarded {
 
 private extension HomeViewController {
 
+    // MARK: - Setup View
+    private func setupView() {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        view.addSubview(titleLbl)
+        setupTitleConstraints()
+        collectionView.register(UINib(nibName: Constants.cellName,
+                                      bundle: nil ),
+                                forCellWithReuseIdentifier: Constants.cellIdentifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        view.addSubview(collectionView)
+        setupCollectionConstraints()
+    }
+
     // MARK: - Binding
     private func setupBinding() {
         viewModel?.model.bind(listener: { [unowned self]  homeModel in
-
             DispatchQueue.main.async {
                 self.model = homeModel
-                guard let items = homeModel?.items else {
-                    return
-                }
-                homeModel?.items.map { print($0)}
-                _ = items.map { print($0.title ?? "")}
+
+                self.titleLbl.text = "HomeViewController"
+                self.collectionView.reloadData()
             }
         })
 
@@ -53,12 +90,49 @@ private extension HomeViewController {
             }
         })
     }
-    
-    private func setupView() {
-
-    }
 
     private func className() -> String {
         return String(describing: self.self)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension HomeViewController: UICollectionViewDelegate {
+
+}
+
+// MARK: - UICollectionViewDataSource
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.model?.items?.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as? HomeCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+
+        cell.data = model?.items?[indexPath.row]
+
+        return cell
+    }
+}
+
+// MARK: - Constraints
+private extension HomeViewController {
+    private func setupCollectionConstraints() {
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.topAnchor.constraint(equalTo: titleLbl.bottomAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+    }
+
+    private func setupTitleConstraints() {
+        titleLbl.translatesAutoresizingMaskIntoConstraints = false
+        titleLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 60.0).isActive = true
+        titleLbl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20.0).isActive = true
+        titleLbl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20.0).isActive = true
+        titleLbl.heightAnchor.constraint(greaterThanOrEqualToConstant: 60).isActive = true
     }
 }

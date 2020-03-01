@@ -11,6 +11,9 @@
 		5517915C240BAED50050E79A /* SLForcesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915B240BAED50050E79A /* SLForcesContainer.swift */; };
 		5517915E240BAF8A0050E79A /* SLContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915D240BAF8A0050E79A /* SLContainer.swift */; };
 		55179160240BAFB60050E79A /* SLAppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915F240BAFB60050E79A /* SLAppContainer.swift */; };
+		55179163240BB9E70050E79A /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55179162240BB9E70050E79A /* HomeCollectionViewLayout.swift */; };
+		55179168240BBCF10050E79A /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55179166240BBCF10050E79A /* HomeCollectionViewCell.swift */; };
+		55179169240BBCF10050E79A /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55179167240BBCF10050E79A /* HomeCollectionViewCell.xib */; };
 		5517D81E2402F34100053260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D81D2402F34100053260 /* AppDelegate.swift */; };
 		5517D8272402F34300053260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8262402F34300053260 /* Assets.xcassets */; };
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
@@ -68,6 +71,9 @@
 		5517915B240BAED50050E79A /* SLForcesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLForcesContainer.swift; sourceTree = "<group>"; };
 		5517915D240BAF8A0050E79A /* SLContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLContainer.swift; sourceTree = "<group>"; };
 		5517915F240BAFB60050E79A /* SLAppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLAppContainer.swift; sourceTree = "<group>"; };
+		55179162240BB9E70050E79A /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
+		55179166240BBCF10050E79A /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		55179167240BBCF10050E79A /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		5517D81A2402F34100053260 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5517D81D2402F34100053260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5517D8262402F34300053260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +144,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55179161240BB9CC0050E79A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				55179162240BB9E70050E79A /* HomeCollectionViewLayout.swift */,
+				55179166240BBCF10050E79A /* HomeCollectionViewCell.swift */,
+				55179167240BBCF10050E79A /* HomeCollectionViewCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		5517D8112402F34100053260 = {
@@ -213,6 +229,7 @@
 		559C3AAB240A77EC006DB5B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55179161240BB9CC0050E79A /* CollectionView */,
 				559C3AB1240A8531006DB5B5 /* HomeStoryboard.storyboard */,
 				559C3AB3240A857C006DB5B5 /* HomeViewController.swift */,
 			);
@@ -509,6 +526,7 @@
 				559C3AA9240A6B09006DB5B5 /* HomeLocalData.json in Resources */,
 				55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */,
 				55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */,
+				55179169240BBCF10050E79A /* HomeCollectionViewCell.xib in Resources */,
 				55BFD62624041B8700D9235A /* Main.storyboard in Resources */,
 				559C3AB2240A8531006DB5B5 /* HomeStoryboard.storyboard in Resources */,
 				5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */,
@@ -554,9 +572,11 @@
 				55BFD5EA240324B700D9235A /* ForcesDetailViewController.swift in Sources */,
 				559C3AA4240A69F6006DB5B5 /* Home+Decodable.swift in Sources */,
 				55BFD5F5240324B700D9235A /* ForcesRepository.swift in Sources */,
+				55179168240BBCF10050E79A /* HomeCollectionViewCell.swift in Sources */,
 				559C3AB4240A857C006DB5B5 /* HomeViewController.swift in Sources */,
 				55BFD5ED240324B700D9235A /* ForcesListModel.swift in Sources */,
 				55BFD5E5240324B700D9235A /* ForcesEntity.swift in Sources */,
+				55179163240BB9E70050E79A /* HomeCollectionViewLayout.swift in Sources */,
 				559C3AAE240A787F006DB5B5 /* HomeModel.swift in Sources */,
 				55BFD5EE240324B700D9235A /* ForcesListTableViewCell.swift in Sources */,
 				55BFD5E6240324B700D9235A /* ForcesRepositoryProtocol.swift in Sources */,

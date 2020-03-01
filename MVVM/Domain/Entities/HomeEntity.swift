@@ -15,5 +15,5 @@ struct HomeEntity {
 struct HomeItemEntity {
     var title: String?
     var description: String?
-    var imageUrl: String?
+    var imageName: String?
 }

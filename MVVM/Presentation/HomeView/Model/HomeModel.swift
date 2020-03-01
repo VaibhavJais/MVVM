@@ -34,18 +34,18 @@ protocol HomeItemModel: HomeItemModelOutput {}
 protocol HomeItemModelOutput {
     var title: String? { get }
     var description: String? { get }
-    var imageUrl: String? { get }
+    var imageName: String? { get }
 }
 
 // MARK: - DefaultHomeItemModel
 struct DefaultHomeItemModel: HomeItemModel {
     var title: String?
     var description: String?
-    var imageUrl: String?
+    var imageName: String?
 
     init(homeItemEntity: HomeItemEntity) {
         self.title = homeItemEntity.title
         self.description = homeItemEntity.description
-        self.imageUrl = homeItemEntity.imageUrl
+        self.imageName = homeItemEntity.imageName
     }
 }
