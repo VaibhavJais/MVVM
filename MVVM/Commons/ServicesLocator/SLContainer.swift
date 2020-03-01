@@ -37,4 +37,11 @@ class SLContainer {
     func makeDataTransferErrorLogger() -> DataTransferErrorLogger {
         return DefaultDataTransferErrorLogger()
     }
+    
+    func makeDataTransferService() -> DataTransferService {
+
+           return DefaultDataTransferService(with: makeNetworkService(),
+                                             errorResolver: makeDataTransferErrorResolver(),
+                                             errorLogger: makeDataTransferErrorLogger())
+       }
 }

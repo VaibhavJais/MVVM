@@ -53,6 +53,6 @@ private extension SLHomeContainer {
 
         return viewController
     }
-    
+
 }
 

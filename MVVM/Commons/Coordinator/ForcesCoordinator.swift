@@ -17,23 +17,25 @@ final class ForcesCoordinator: Coordinator {
     weak var parentCoordinator: HomeCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    private let containerForces: SLForcesContainer = SLForcesContainer()
+    weak var container: SLForcesContainer?
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController,
+         container: SLForcesContainer = SLForcesContainer()) {
+        self.container = container
         self.navigationController = navigationController
     }
 
     func start() {
-        guard let vc = containerForces.container?.resolve(ForcesListViewController.self) else {
+        guard let vc = container?.container?.resolve(ForcesListViewController.self) else {
             // TODO error
             return
         }
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        navigationController.pushViewController(vc, animated: true)
     }
 
     func forcesDetail(with identifier: String) {
-        let vc = containerForces.container?.resolve(ForcesDetailViewController.self)
+        let vc = container?.container?.resolve(ForcesDetailViewController.self)
         guard let viewController = vc else {
             //TODO Throws error
             return

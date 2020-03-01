@@ -44,6 +44,7 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         for (index, coordinator) in
             childCoordinators.enumerated() {
                 if coordinator === child {
+                    coordinator.childCoordinators.removeAll()
                     childCoordinators.remove(at: index)
                     break
                 }
@@ -61,6 +62,11 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         }
         if let forcesViewController = fromViewController as? ForcesListViewController {
             childDidFinish(forcesViewController.coordinator)
+            forcesViewController.coordinator?.container = nil
+            forcesViewController.viewModel = nil
+            forcesViewController.coordinator = nil
+
+
         }
     }
 }

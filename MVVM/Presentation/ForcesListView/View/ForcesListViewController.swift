@@ -33,11 +33,6 @@ final class ForcesListViewController: UIViewController, Storyboarded {
         viewModel?.viewDidLoad()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("Forces LIST viewDidDisappear")
-    }
-
     // MARK: - Binding
     private func setupBinding() {
         viewModel?.items.bind(listener: { [unowned self]  (items) in

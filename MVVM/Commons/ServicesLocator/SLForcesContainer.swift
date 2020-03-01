@@ -10,20 +10,19 @@ import Foundation
 import SKRools
 
 // MARK: - SLForcesContainer
-final class SLForcesContainer {
+final class SLForcesContainer: SLContainer {
 
     // MARK: - Properties
-    private (set) var container: Container?
-    private let appContainer: SLAppContainer
+     private (set) var container: Container?
+   // weak var appContainer: SLAppContainer?
 
     // MARK: - LifeCycle
-    init(appContainer: SLAppContainer = SLAppContainer()) {
-        self.appContainer = appContainer
+    override init() {
+        super.init()
+//        self.appContainer = appContainer
         setup()
     }
-    deinit{
-        container = nil
-    }
+
     private func setup() {
         container = Container()
             .register(ForcesListViewController.self) { resolve in
@@ -36,10 +35,10 @@ final class SLForcesContainer {
 }
 
 private extension SLForcesContainer {
-    // MARK: - Common
-      private func makeDataTransferService() -> DataTransferService {
-          return appContainer.container.resolve(DataTransferService.self)
-      }
+//    // MARK: - Common
+//      private func makeDataTransferService() -> DataTransferService {
+//          return appContainer!.container.resolve(DataTransferService.self)
+//      }
 
       // MARK: - Forces List
       private func makeForcesListRepository() -> ForcesRepository {
