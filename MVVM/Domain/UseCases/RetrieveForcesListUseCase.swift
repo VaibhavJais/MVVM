@@ -23,13 +23,6 @@ final class DefaultForcesListUseCase: ForcesListUseCase {
     }
 
     func execute(completion: @escaping (Result<ForcesListEntity, Error>) -> Void) -> Cancellable? {
-        return forcesListRepository.forcesList(completion: { result in
-            switch result {
-            case .success:
-                completion(result)
-            case .failure:
-                completion(result)
-            }
-        })
+        return forcesListRepository.forcesList(completion: completion)
     }
 }

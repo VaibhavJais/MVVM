@@ -9,68 +9,58 @@
 import Foundation
 import SKRools
 
-// MARK: - SLForcesContainer
-final class SLForcesContainer: SLContainer {
+protocol SLForcesContainer {
+    func forcesListView() -> ForcesListViewController
+    func forcesDetailView() -> ForcesDetailViewController
+}
 
-    // MARK: - Properties
-     private (set) var container: Container?
-   // weak var appContainer: SLAppContainer?
-
-    // MARK: - LifeCycle
-    override init() {
-        super.init()
-//        self.appContainer = appContainer
-        setup()
+final class DefaultSLForcesContainer: SLContainer, SLForcesContainer {
+    func forcesListView() -> ForcesListViewController {
+        return makeForcesListView()
     }
 
-    private func setup() {
-        container = Container()
-            .register(ForcesListViewController.self) { resolve in
-                return self.makeForcesListView()
-        }
-        .register(ForcesDetailViewController.self) { resolve in
-            return self.makeForcesDetailView()
-        }
+    func forcesDetailView() -> ForcesDetailViewController {
+        return makeForcesDetailView()
     }
 }
 
-private extension SLForcesContainer {
-//    // MARK: - Common
-//      private func makeDataTransferService() -> DataTransferService {
-//          return appContainer!.container.resolve(DataTransferService.self)
-//      }
+private extension DefaultSLForcesContainer {
 
-      // MARK: - Forces List
-      private func makeForcesListRepository() -> ForcesRepository {
-          return DefaultForcesRepository(dataTransferService: makeDataTransferService())
-      }
+    // MARK: - Forces List dependencies
+    private func makeForcesListRepository() -> ForcesRepository {
+        return DefaultForcesRepository(dataTransferService: makeDataTransferService())
+    }
 
-      private func makeForcesListUseCase() -> ForcesListUseCase {
-          return DefaultForcesListUseCase(forcesListRepository: makeForcesListRepository())
-      }
+    private func makeForcesListUseCase() -> ForcesListUseCase {
+        return DefaultForcesListUseCase(forcesListRepository: makeForcesListRepository())
+    }
 
-      private func makeForcesListViewModel() -> ForcesListViewModel {
-          return DefaultForcesListViewModel(forceListUseCase: makeForcesListUseCase())
-      }
+    private func makeForcesListViewModel() -> ForcesListViewModel {
+        return DefaultForcesListViewModel(forceListUseCase: makeForcesListUseCase())
+    }
 
-      private func makeForcesListView() -> ForcesListViewController {
+    // MARK: - Forces List View
+    private func makeForcesListView() -> ForcesListViewController {
         let viewController = ForcesListViewController.instantiate(storyboardName: Constants.forcesListStoryboard)
-          viewController.viewModel = makeForcesListViewModel()
-          return viewController
-      }
+        viewController.viewModel = makeForcesListViewModel()
+        
+        return viewController
+    }
 
-      // MARK: - Forces Detail
-      private func makeForcesDetailUseCase() -> ForcesDetailUseCase {
-          return DefaultForcesDetailUseCase(repository: makeForcesListRepository())
-      }
+    // MARK: - Forces Detail dependencies
+    private func makeForcesDetailUseCase() -> ForcesDetailUseCase {
+        return DefaultForcesDetailUseCase(repository: makeForcesListRepository())
+    }
 
-      private func makeForcesDetailViewModel() -> ForcesDetailViewModel {
-          return DefaultForcesDetailViewModel(forceDetailUseCase: makeForcesDetailUseCase())
-      }
+    private func makeForcesDetailViewModel() -> ForcesDetailViewModel {
+        return DefaultForcesDetailViewModel(forceDetailUseCase: makeForcesDetailUseCase())
+    }
 
-      private func makeForcesDetailView() -> ForcesDetailViewController {
+    // MARK: - Forces Detail View
+    private func makeForcesDetailView() -> ForcesDetailViewController {
         let viewController = ForcesDetailViewController.instantiate(storyboardName: Constants.forcesDetailStoryboard)
-          viewController.viewModel = makeForcesDetailViewModel()
-          return viewController
-      }
+        viewController.viewModel = makeForcesDetailViewModel()
+
+        return viewController
+    }
 }

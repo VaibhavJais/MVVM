@@ -10,7 +10,6 @@
 		5517915A240BABF10050E79A /* SLHomeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55179159240BABF10050E79A /* SLHomeContainer.swift */; };
 		5517915C240BAED50050E79A /* SLForcesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915B240BAED50050E79A /* SLForcesContainer.swift */; };
 		5517915E240BAF8A0050E79A /* SLContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915D240BAF8A0050E79A /* SLContainer.swift */; };
-		55179160240BAFB60050E79A /* SLAppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517915F240BAFB60050E79A /* SLAppContainer.swift */; };
 		55179163240BB9E70050E79A /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55179162240BB9E70050E79A /* HomeCollectionViewLayout.swift */; };
 		55179168240BBCF10050E79A /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55179166240BBCF10050E79A /* HomeCollectionViewCell.swift */; };
 		55179169240BBCF10050E79A /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55179167240BBCF10050E79A /* HomeCollectionViewCell.xib */; };
@@ -70,7 +69,6 @@
 		55179159240BABF10050E79A /* SLHomeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLHomeContainer.swift; sourceTree = "<group>"; };
 		5517915B240BAED50050E79A /* SLForcesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLForcesContainer.swift; sourceTree = "<group>"; };
 		5517915D240BAF8A0050E79A /* SLContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLContainer.swift; sourceTree = "<group>"; };
-		5517915F240BAFB60050E79A /* SLAppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLAppContainer.swift; sourceTree = "<group>"; };
 		55179162240BB9E70050E79A /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		55179166240BBCF10050E79A /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		55179167240BBCF10050E79A /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -431,7 +429,6 @@
 				55179159240BABF10050E79A /* SLHomeContainer.swift */,
 				5517915B240BAED50050E79A /* SLForcesContainer.swift */,
 				5517915D240BAF8A0050E79A /* SLContainer.swift */,
-				5517915F240BAFB60050E79A /* SLAppContainer.swift */,
 			);
 			path = ServicesLocator;
 			sourceTree = "<group>";
@@ -562,7 +559,6 @@
 				5517915C240BAED50050E79A /* SLForcesContainer.swift in Sources */,
 				55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */,
 				55BFD5F0240324B700D9235A /* ForcesListViewController.swift in Sources */,
-				55179160240BAFB60050E79A /* SLAppContainer.swift in Sources */,
 				55BFD5F7240324B700D9235A /* ForcesCoordinator.swift in Sources */,
 				55BFD5E8240324B700D9235A /* ForcesDetailModel.swift in Sources */,
 				55BFD5F2240324B700D9235A /* ForcesDetail+Decodable.swift in Sources */,

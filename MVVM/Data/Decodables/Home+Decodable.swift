@@ -9,7 +9,6 @@
 import Foundation
 
 extension HomeEntity: Decodable {
-
     private enum CodingKeys: String, CodingKey {
         case items
     }

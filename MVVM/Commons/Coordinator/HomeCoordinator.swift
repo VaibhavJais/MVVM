@@ -10,25 +10,19 @@ import UIKit
 import SKRools
 
 class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
-
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    private let container: SLHomeContainer = SLHomeContainer()
+    private let container: SLHomeContainer? = DefaultSLHomeContainer()
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
 
     func start() {
-        guard let vc = container.container?.resolve(HomeViewController.self) else {
-            // TODO error
-            return
-        }
-
+        guard let vc = container?.homeView() else { return }
         vc.forcesList = { [weak self] in
             self?.forcesSubscription()
         }
-
         navigationController.delegate = self
         navigationController.pushViewController(vc, animated: false)
     }
@@ -60,13 +54,10 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         if  navigationController.viewControllers.contains(fromViewController) {
             return
         }
-        if let forcesViewController = fromViewController as? ForcesListViewController {
-            childDidFinish(forcesViewController.coordinator)
-            forcesViewController.coordinator?.container = nil
-            forcesViewController.viewModel = nil
-            forcesViewController.coordinator = nil
-
-
+        if let forcesListViewController = fromViewController as? ForcesListViewController {
+            childDidFinish(forcesListViewController.coordinator)
+            forcesListViewController.viewModel = nil
+            forcesListViewController.coordinator = nil
         }
     }
 }

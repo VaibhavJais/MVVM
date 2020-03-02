@@ -15,15 +15,14 @@ class HomeViewController: UIViewController, Storyboarded {
     private struct Constants {
         static let cellIdentifier = "HomeCollectionViewCellID"
         static let cellName = "HomeCollectionViewCell"
+        static let fontName = "Verdana-bold"
     }
 
-    // MARK: - Properties
+    // MARK: Properties
     private var model: HomeModel?
     var viewModel: HomeViewModel?
     var forcesList: (() -> Void)?
 
-
-    // MARK: - IBOutlets
     private let collectionView: UICollectionView = {
         let layout = HomeCollectionViewLayout()
         layout.scrollDirection = .vertical
@@ -35,7 +34,7 @@ class HomeViewController: UIViewController, Storyboarded {
 
     private let titleLbl: UILabel = {
         let lbl = UILabel(frame: .zero)
-        lbl.font = UIFont(name: "Verdana-bold", size: 30)
+        lbl.font = UIFont(name: Constants.fontName, size: 30)
         lbl.backgroundColor = .lightGray
         lbl.textAlignment = .center
         lbl.numberOfLines = 1
@@ -45,7 +44,7 @@ class HomeViewController: UIViewController, Storyboarded {
         return lbl
     }()
 
-    // MARK: - View LifeCycle
+    // MARK: View lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -59,9 +58,10 @@ class HomeViewController: UIViewController, Storyboarded {
     }
 }
 
+// MARK: - Private methods
 private extension HomeViewController {
 
-    // MARK: - Setup View
+    // MARK: Setup View
     private func setupView() {
         view.addSubview(titleLbl)
         setupTitleConstraints()
@@ -74,7 +74,7 @@ private extension HomeViewController {
         setupCollectionConstraints()
     }
 
-    // MARK: - Binding
+    // MARK: Binding
     private func setupBinding() {
         viewModel?.model.bind(listener: { [unowned self]  homeModel in
             DispatchQueue.main.async {

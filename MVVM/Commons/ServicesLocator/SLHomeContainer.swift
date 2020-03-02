@@ -9,32 +9,23 @@
 import Foundation
 import SKRools
 
-final class SLHomeContainer: SLContainer {
+protocol SLHomeContainer {
+    func homeView() -> HomeViewController
+}
 
-    // MARK: - Properties
-    private (set) var container: Container?
-
-    // MARK: - LifeCycle
-    override init() {
-        super.init()
-        setup()
-    }
-
-    private func setup() {
-        container = Container()
-            .register(HomeViewController.self) { resolve in
-                return self.makeHomeView()
-        }
+final class DefaultSLHomeContainer: SLContainer, SLHomeContainer {
+    func homeView() -> HomeViewController {
+        return makeHomeView()
     }
 }
 
-private extension SLHomeContainer {
+private extension DefaultSLHomeContainer {
     // MARK: - Common
     private func makeLocalDataTransferService() -> LocalDataTransferService {
         return DefaultLocalDataTransferService(with: makeLocalService())
     }
 
-    // MARK: - Forces List
+    // MARK: - Home View Depedencies
     private func makeHomeRepository() -> HomeRepository {
         return DefaultHomeRepository(localDataTransferService: makeLocalDataTransferService())
     }
@@ -47,12 +38,11 @@ private extension SLHomeContainer {
         return DefaultHomeViewModel(homeUseCase: makeHomeUseCase())
     }
 
+    // MARK: - Home View
     private func makeHomeView() -> HomeViewController {
         let viewController = HomeViewController.instantiate(storyboardName: Constants.homeStoryboard)
         viewController.viewModel = makeHomeViewModel()
 
         return viewController
     }
-
 }
-

@@ -24,7 +24,6 @@ protocol HomeViewModelOutput {
 protocol HomeViewModelInput {
     func viewDidLoad()
     func updateView()
-    func showItemDetail(indexPath: IndexPath, coordinator: ForcesCoordinator?)
 }
 
 // MARK: - DefaultHomeistViewModel
@@ -78,13 +77,4 @@ extension DefaultHomeViewModel: HomeViewModel {
              self.loadingStatus.value = .stop
          }
      }
-}
-
-// MARK: - User Actions
-extension HomeViewModel {
-    
-    // MARK: Show Netx View
-    func showItemDetail(indexPath: IndexPath, coordinator: ForcesCoordinator?) {
-
-    }
 }

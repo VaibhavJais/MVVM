@@ -10,36 +10,32 @@ import UIKit
 import SKRools
 
 protocol ForcesCoordinatorProtocol {
-    func forcesList()
+    func showForcesDetail()
 }
 
 final class ForcesCoordinator: Coordinator {
     weak var parentCoordinator: HomeCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    weak var container: SLForcesContainer?
+    private let container: SLForcesContainer?
 
     init(navigationController: UINavigationController,
-         container: SLForcesContainer = SLForcesContainer()) {
+         container: SLForcesContainer = DefaultSLForcesContainer()) {
         self.container = container
         self.navigationController = navigationController
     }
 
     func start() {
-        guard let vc = container?.container?.resolve(ForcesListViewController.self) else {
-            // TODO error
-            return
+        guard let vc = container?.forcesListView() else { return }
+        vc.forcesDetail = { [weak self] identifier in
+            self?.forcesDetail(identifier: identifier)
         }
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
 
-    func forcesDetail(with identifier: String) {
-        let vc = container?.container?.resolve(ForcesDetailViewController.self)
-        guard let viewController = vc else {
-            //TODO Throws error
-            return
-        }
+    func forcesDetail(identifier: String) {
+        guard let viewController = container?.forcesDetailView() else { return }
         viewController.coordinator = self
         viewController.viewModel?.updateView(forcesId: identifier)
         navigationController.pushViewController(viewController, animated: true)

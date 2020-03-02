@@ -51,7 +51,7 @@ extension DefaultForcesListViewModel: ForcesListViewModel {
             // TODO throws error
             return
         }
-        coordinator?.forcesDetail(with: identifier)
+        coordinator?.forcesDetail(identifier: identifier)
     }
 
     public func updateView() {

@@ -24,6 +24,7 @@ final class ForcesListViewController: UIViewController, Storyboarded {
     private var items: [ForcesListModel]?
     var viewModel: ForcesListViewModel?
     weak var coordinator: ForcesCoordinator?
+    var forcesDetail: ((_ forceId: String) -> Void)?
 
     // MARK: - View LifeCycle
     override func viewDidLoad() {
