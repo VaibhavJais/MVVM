@@ -9,25 +9,23 @@
 import Foundation
 import SKRools
 
-//MARK: - ForcesDetailViewModel
+// MARK: - ForcesDetailViewModel
 protocol ForcesDetailViewModel: ForcesDetailViewModelInput, ForcesDetailViewModelOutput {}
 
-//MARK: - ForcesDetailViewModelInput
+// MARK: - ForcesDetailViewModelInput
 protocol ForcesDetailViewModelInput {
-    var forcesIdentifier: String? { get set }
-
     func updateView(forcesId: String)
     func viewDidLoad()
 }
 
-//MARK: - ForcesDetailViewModelOutput
+// MARK: - ForcesDetailViewModelOutput
 protocol ForcesDetailViewModelOutput {
     var items: Box<ForcesDetailModel?> { get }
     var loadingStatus: Box<LoadingStatus> { get }
     var error: Box<Error?> { get }
 }
 
-//MARK: - DefaultForcesDetailViewModel
+// MARK: - DefaultForcesDetailViewModel
 final class DefaultForcesDetailViewModel: ForcesDetailViewModel {
 
     //MARK: - Properties
@@ -61,7 +59,6 @@ final class DefaultForcesDetailViewModel: ForcesDetailViewModel {
                 DispatchQueue.main.async { self.items.value = forceDetail }
             case .failure(let error):
                 DispatchQueue.main.async { self.error.value = error }
-                print(error)
             }
             DispatchQueue.main.async { self.loadingStatus.value = .stop }
         }

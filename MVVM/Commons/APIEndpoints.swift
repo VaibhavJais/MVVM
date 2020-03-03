@@ -9,7 +9,15 @@
 import Foundation
 import SKRools
 
+// MARK: - Home Endpoints
 struct APIEndpoints {
+    static func homeList() -> Endpoint<HomeEntity> {
+        return Endpoint(path: Constants.homeListEndpoint)
+    }
+}
+
+// MARK: - Forces Enpoints
+extension APIEndpoints {
     static func forcesList() -> Endpoint<ForcesListEntity> {
         return Endpoint(path: Constants.forcesListEndpoint)
     }

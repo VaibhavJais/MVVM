@@ -31,10 +31,11 @@
                             <constraint firstAttribute="height" constant="21" id="50b-St-w6U"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="P2i-mG-jkr" secondAttribute="trailing" constant="16" id="OBb-oF-itu"/>
                     <constraint firstAttribute="bottom" secondItem="EUN-sX-S2G" secondAttribute="bottom" constant="5" id="SUz-Sd-yGx"/>

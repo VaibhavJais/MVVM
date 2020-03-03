@@ -1,42 +1,32 @@
 //
-//  DIForcesContainer.swift
-//  Pattern MVVM
+//  SLForcesContainer.swift
+//  MVVM
 //
-//  Created by Oscar Cardona on 23/02/2020.
+//  Created by Oscar Cardona on 01/03/2020.
 //  Copyright © 2020 Cardona.tv. All rights reserved.
 //
 
 import Foundation
 import SKRools
 
-// MARK: - DIForcesContainer
-final class DIForcesContainer {
+protocol SLForcesContainer {
+    func forcesListView() -> ForcesListViewController
+    func forcesDetailView() -> ForcesDetailViewController
+}
 
-    // MARK: - Properties
-    private (set) var container: Container?
-    private let appContainer = DIAppContainer()
-
-    // MARK: - LifeCycle
-    init() {
-        setup()
+final class DefaultSLForcesContainer: SLContainer, SLForcesContainer {
+    func forcesListView() -> ForcesListViewController {
+        return makeForcesListView()
     }
 
-    private func setup() {
-        container = Container()
-            .register(ForcesListViewController.self) { resolve in
-                return self.makeForcesListView()
-        }
-        .register(ForcesDetailViewController.self) { resolve in
-            return self.makeForcesDetailView()
-        }
+    func forcesDetailView() -> ForcesDetailViewController {
+        return makeForcesDetailView()
     }
+}
 
-    // MARK: - Common
-    private func makeDataTransferService() -> DataTransferService {
-        return appContainer.container.resolve(DataTransferService.self)
-    }
+private extension DefaultSLForcesContainer {
 
-    // MARK: - Forces List
+    // MARK: - Forces List dependencies
     private func makeForcesListRepository() -> ForcesRepository {
         return DefaultForcesRepository(dataTransferService: makeDataTransferService())
     }
@@ -49,13 +39,15 @@ final class DIForcesContainer {
         return DefaultForcesListViewModel(forceListUseCase: makeForcesListUseCase())
     }
 
+    // MARK: - Forces List View
     private func makeForcesListView() -> ForcesListViewController {
-        let viewController = ForcesListViewController.instantiate(storyboardName: "Main")
+        let viewController = ForcesListViewController.instantiate(storyboardName: Constants.forcesListStoryboard)
         viewController.viewModel = makeForcesListViewModel()
+        
         return viewController
     }
 
-    // MARK: - Forces Detail
+    // MARK: - Forces Detail dependencies
     private func makeForcesDetailUseCase() -> ForcesDetailUseCase {
         return DefaultForcesDetailUseCase(repository: makeForcesListRepository())
     }
@@ -64,9 +56,11 @@ final class DIForcesContainer {
         return DefaultForcesDetailViewModel(forceDetailUseCase: makeForcesDetailUseCase())
     }
 
+    // MARK: - Forces Detail View
     private func makeForcesDetailView() -> ForcesDetailViewController {
-        let viewController = ForcesDetailViewController.instantiate(storyboardName: "ForcesDetailStoryboard")
+        let viewController = ForcesDetailViewController.instantiate(storyboardName: Constants.forcesDetailStoryboard)
         viewController.viewModel = makeForcesDetailViewModel()
+
         return viewController
     }
 }

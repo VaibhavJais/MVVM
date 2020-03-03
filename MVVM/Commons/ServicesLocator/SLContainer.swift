@@ -1,31 +1,22 @@
 //
-//  DIAppContainer.swift
-//  Pattern MVVM
+//  SLContainer.swift
+//  MVVM
 //
-//  Created by Oscar Cardona on 23/02/2020.
+//  Created by Oscar Cardona on 01/03/2020.
 //  Copyright © 2020 Cardona.tv. All rights reserved.
 //
 
 import Foundation
 import SKRools
 
-//MARK: - DIAppContainer
-final class DIAppContainer {
+class SLContainer {
 
-    // MARK: - Properties
-    private (set) var container: Container
+    // MARK: - Local data
+    func makeLocalService() -> LocalService {
+        let logger = DefaultNetworkErrorLogger()
+        let bundle = Bundle.main
 
-    // MARK: - LifeCycle
-    init(container: Container = Container()) {
-        self.container = container
-        setup()
-    }
-
-    private func setup() {
-        container = Container()
-            .register(DataTransferService.self) { resolve in
-                return self.makeDataTransferService()
-        }
+        return DefaultLocalService(logger: logger, bundle: bundle)
     }
 
     // MARK: - Networking
@@ -46,9 +37,8 @@ final class DIAppContainer {
     func makeDataTransferErrorLogger() -> DataTransferErrorLogger {
         return DefaultDataTransferErrorLogger()
     }
-
+    
     func makeDataTransferService() -> DataTransferService {
-
         return DefaultDataTransferService(with: makeNetworkService(),
                                           errorResolver: makeDataTransferErrorResolver(),
                                           errorLogger: makeDataTransferErrorLogger())
