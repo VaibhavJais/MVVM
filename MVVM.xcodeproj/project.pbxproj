@@ -18,7 +18,6 @@
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
 		555301A5240AB09900CF6297 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A4240AB09900CF6297 /* HomeCoordinator.swift */; };
-		555301B1240AD25400CF6297 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 555301B0240AD25400CF6297 /* SKRools */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */; };
@@ -29,6 +28,7 @@
 		559C3AB0240A788E006DB5B5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AAF240A788E006DB5B5 /* HomeViewModel.swift */; };
 		559C3AB2240A8531006DB5B5 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559C3AB1240A8531006DB5B5 /* HomeStoryboard.storyboard */; };
 		559C3AB4240A857C006DB5B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AB3240A857C006DB5B5 /* HomeViewController.swift */; };
+		55B2BBA224103C5D00AFC301 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 55B2BBA124103C5D00AFC301 /* SKRools */; };
 		55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */; };
 		55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */; };
 		55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */; };
@@ -81,7 +81,6 @@
 		5517D8342402F34400053260 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555301A4240AB09900CF6297 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		555301AF240AD12100CF6297 /* SKRools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKRools; path = "../Swift Pakages/SKRools"; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHomeUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -123,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				555301B1240AD25400CF6297 /* SKRools in Frameworks */,
+				55B2BBA224103C5D00AFC301 /* SKRools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +156,6 @@
 		5517D8112402F34100053260 = {
 			isa = PBXGroup;
 			children = (
-				555301AF240AD12100CF6297 /* SKRools */,
 				5517D81C2402F34100053260 /* MVVM */,
 				5517D8332402F34400053260 /* MVVMTests */,
 				5517D81B2402F34100053260 /* Products */,
@@ -450,7 +448,7 @@
 			);
 			name = MVVM;
 			packageProductDependencies = (
-				555301B0240AD25400CF6297 /* SKRools */,
+				55B2BBA124103C5D00AFC301 /* SKRools */,
 			);
 			productName = MVVM;
 			productReference = 5517D81A2402F34100053260 /* MVVM.app */;
@@ -503,7 +501,7 @@
 			);
 			mainGroup = 5517D8112402F34100053260;
 			packageReferences = (
-				5512CFFF2404866F002546F1 /* XCRemoteSwiftPackageReference "SKRools" */,
+				55B2BBA024103C5D00AFC301 /* XCRemoteSwiftPackageReference "SKRools" */,
 			);
 			productRefGroup = 5517D81B2402F34100053260 /* Products */;
 			projectDirPath = "";
@@ -849,7 +847,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5512CFFF2404866F002546F1 /* XCRemoteSwiftPackageReference "SKRools" */ = {
+		55B2BBA024103C5D00AFC301 /* XCRemoteSwiftPackageReference "SKRools" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cardona/SKRools.git";
 			requirement = {
@@ -860,8 +858,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		555301B0240AD25400CF6297 /* SKRools */ = {
+		55B2BBA124103C5D00AFC301 /* SKRools */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 55B2BBA024103C5D00AFC301 /* XCRemoteSwiftPackageReference "SKRools" */;
 			productName = SKRools;
 		};
 /* End XCSwiftPackageProductDependency section */
