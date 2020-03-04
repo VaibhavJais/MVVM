@@ -65,7 +65,7 @@ extension DefaultForcesListViewModel: ForcesListViewModel {
                     self?.loadingStatus.value = .stop
                 }
             case .failure(let error):
-                print(error)
+                self?.error = error
             }
         })
     }
