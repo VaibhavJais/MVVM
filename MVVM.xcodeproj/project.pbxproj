@@ -199,6 +199,116 @@
 			path = MVVMTests;
 			sourceTree = "<group>";
 		};
+		5565CF62241CD4C9002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9A240A68D6006DB5B5 /* HomeView */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF63241CD5EB002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5BD240324B700D9235A /* ForcesDetailView */,
+				55BFD5C6240324B700D9235A /* ForcesListView */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF66241CD641002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF67241CD65B002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */,
+				55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF68241CD66E002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF69241CD677002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5B9240324B600D9235A /* ForcesEntity.swift */,
+				55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */,
+				55BFD5B8240324B600D9235A /* ForcesDetailEntity.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF6A241CD692002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF6B241CD69A002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5BB240324B700D9235A /* ForcesRepositoryProtocol.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF6C241CD6B5002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA3240A69F6006DB5B5 /* Home+Decodable.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF6D241CD6BC002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5D4240324B700D9235A /* ForcesDetail+Decodable.swift */,
+				55BFD5D5240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift */,
+				55BFD5D6240324B700D9235A /* ForcesList+Decodable.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF6E241CD6CB002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA5240A6A07006DB5B5 /* HomeRepository.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF6F241CD6D3002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5D8240324B700D9235A /* ForcesRepository.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF70241CD6E5002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA8240A6AFF006DB5B5 /* HomeLocalData.json */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
 		559C3A9A240A68D6006DB5B5 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +322,7 @@
 		559C3AA7240A6ABD006DB5B5 /* LocalData */ = {
 			isa = PBXGroup;
 			children = (
-				559C3AA8240A6AFF006DB5B5 /* HomeLocalData.json */,
+				5565CF70241CD6E5002763CF /* HomeScene */,
 			);
 			path = LocalData;
 			sourceTree = "<group>";
@@ -256,9 +366,8 @@
 		55BFD5B3240324B600D9235A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */,
-				55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */,
-				559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */,
+				5565CF67241CD65B002763CF /* ForcesScene */,
+				5565CF66241CD641002763CF /* HomeScene */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -266,10 +375,8 @@
 		55BFD5B6240324B600D9235A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */,
-				55BFD5B8240324B600D9235A /* ForcesDetailEntity.swift */,
-				55BFD5B9240324B600D9235A /* ForcesEntity.swift */,
-				559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */,
+				5565CF69241CD677002763CF /* ForcesScene */,
+				5565CF68241CD66E002763CF /* HomeScene */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -277,8 +384,8 @@
 		55BFD5BA240324B600D9235A /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5BB240324B700D9235A /* ForcesRepositoryProtocol.swift */,
-				559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */,
+				5565CF6B241CD69A002763CF /* ForcesScene */,
+				5565CF6A241CD692002763CF /* HomeScene */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -286,9 +393,8 @@
 		55BFD5BC240324B700D9235A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				559C3A9A240A68D6006DB5B5 /* HomeView */,
-				55BFD5BD240324B700D9235A /* ForcesDetailView */,
-				55BFD5C6240324B700D9235A /* ForcesListView */,
+				5565CF63241CD5EB002763CF /* ForcesScene */,
+				5565CF62241CD4C9002763CF /* HomeScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -387,10 +493,8 @@
 		55BFD5D3240324B700D9235A /* Decodables */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5D4240324B700D9235A /* ForcesDetail+Decodable.swift */,
-				55BFD5D5240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift */,
-				55BFD5D6240324B700D9235A /* ForcesList+Decodable.swift */,
-				559C3AA3240A69F6006DB5B5 /* Home+Decodable.swift */,
+				5565CF6D241CD6BC002763CF /* ForcesScene */,
+				5565CF6C241CD6B5002763CF /* HomeScene */,
 			);
 			path = Decodables;
 			sourceTree = "<group>";
@@ -398,8 +502,8 @@
 		55BFD5D7240324B700D9235A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5D8240324B700D9235A /* ForcesRepository.swift */,
-				559C3AA5240A6A07006DB5B5 /* HomeRepository.swift */,
+				5565CF6F241CD6D3002763CF /* ForcesScene */,
+				5565CF6E241CD6CB002763CF /* HomeScene */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
