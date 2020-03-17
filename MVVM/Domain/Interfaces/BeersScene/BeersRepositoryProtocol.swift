@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import SKRools
+
+protocol BeersRepository {
+    func beersList(completion: @escaping (Result<[BeerEntity], Error>) -> Void) -> Cancellable?
+}

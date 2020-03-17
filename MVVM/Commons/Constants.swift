@@ -10,14 +10,17 @@ import Foundation
 
 public enum Constants {
     static let urlBase = "https://data.police.uk/api/"
+    static let beersUrlBase = "https://api.punkapi.com/v2/"
 
     // MARK: - Endpoints
     static let forcesListEndpoint = "forces"
     static let forcesDetailEndpoint = "forces/"
     static let homeListEndpoint = "HomeLocalData"
+    static let beersListEndpoint = "beers"
 
     // MARK: - Storyboard Identifier
     static let homeStoryboard = "HomeStoryboard"
     static let forcesListStoryboard = "Main"
     static let forcesDetailStoryboard = "ForcesDetailStoryboard"
+    static let beersListStoryboard = "BeerListStoryboard"
 }
