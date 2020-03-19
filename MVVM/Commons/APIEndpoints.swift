@@ -26,3 +26,36 @@ extension APIEndpoints {
         return Endpoint(path: Constants.forcesDetailEndpoint + query)
     }
 }
+
+// MARK: - Beers Enpoints
+
+extension APIEndpoints {
+    static func beersList() -> Endpoint<[BeerEntity]> {
+        return Endpoint(path: Constants.beersListEndpoint)
+    }
+}
+
+
+extension APIEndpoints {
+    static func image(url: String) -> Endpoint<Data> {
+        return Endpoint(path: url, responseDecoder: RawDataResponseDecoder())
+    }
+}
+
+public class RawDataResponseDecoder: ResponseDecoder {
+    public init() { }
+
+    enum CodingKeys: String, CodingKey {
+        case `default` = ""
+    }
+    public func decode<T: Decodable>(_ data: Data) throws -> T {
+        if T.self is Data.Type, let data = data as? T {
+            return data
+        } else {
+            let context = DecodingError.Context(codingPath: [CodingKeys.default], debugDescription: "Expected Data type")
+            throw Swift.DecodingError.typeMismatch(T.self, context)
+        }
+    }
+}
+
+
