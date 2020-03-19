@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, Storyboarded {
     private var model: HomeModel?
     var viewModel: HomeViewModel?
     var forcesList: (() -> Void)?
+    var beersList: (() -> Void)?
 
     private let collectionView: UICollectionView = {
         let layout = HomeCollectionViewLayout()
@@ -115,7 +116,7 @@ extension HomeViewController: UICollectionViewDelegate {
         case "policeId":
             forcesList?()
         case "beerId":
-            print("BEER")
+            beersList?()
         case "settingsId":
             print("SETTINGS")
         default:

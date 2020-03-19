@@ -18,6 +18,31 @@
 		5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517D8282402F34300053260 /* LaunchScreen.storyboard */; };
 		5517D8352402F34400053260 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517D8342402F34400053260 /* MVVMTests.swift */; };
 		555301A5240AB09900CF6297 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555301A4240AB09900CF6297 /* HomeCoordinator.swift */; };
+		5565CF87241CF61E002763CF /* BeersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF86241CF61E002763CF /* BeersListViewController.swift */; };
+		5565CF89241CF64D002763CF /* BeersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF88241CF64D002763CF /* BeersListModel.swift */; };
+		5565CF8B241CF661002763CF /* BeersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF8A241CF661002763CF /* BeersListViewModel.swift */; };
+		5565CF8D241CF6BB002763CF /* BeersRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF8C241CF6BB002763CF /* BeersRepositoryProtocol.swift */; };
+		5565CF8F241CF718002763CF /* RetrieveBeersListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF8E241CF718002763CF /* RetrieveBeersListUseCase.swift */; };
+		5565CF91241CF737002763CF /* BeersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF90241CF737002763CF /* BeersRepository.swift */; };
+		5565CF93241D034E002763CF /* BeersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF92241D034E002763CF /* BeersEntity.swift */; };
+		5565CF95241D0742002763CF /* Beer+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF94241D0742002763CF /* Beer+Decodable.swift */; };
+		5565CF97241D0C3D002763CF /* Volume+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF96241D0C3D002763CF /* Volume+Decodable.swift */; };
+		5565CF9B241D0CF8002763CF /* BoilVolume+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF9A241D0CF8002763CF /* BoilVolume+Decodable.swift */; };
+		5565CF9D241D11BE002763CF /* Method+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF9C241D11BE002763CF /* Method+Decodable.swift */; };
+		5565CF9F241D1F98002763CF /* MashTemp+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CF9E241D1F98002763CF /* MashTemp+Decodable.swift */; };
+		5565CFA1241D1FB1002763CF /* Temp+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFA0241D1FB1002763CF /* Temp+Decodable.swift */; };
+		5565CFA3241D20DF002763CF /* Fermentation+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFA2241D20DF002763CF /* Fermentation+Decodable.swift */; };
+		5565CFA5241D225B002763CF /* Ingredients+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFA4241D225B002763CF /* Ingredients+Decodable.swift */; };
+		5565CFA7241D2347002763CF /* Hops+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFA6241D2347002763CF /* Hops+Decodable.swift */; };
+		5565CFA9241D235A002763CF /* Malt+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFA8241D235A002763CF /* Malt+Decodable.swift */; };
+		5565CFAB241D2485002763CF /* Amount+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFAA241D2485002763CF /* Amount+Decodable.swift */; };
+		5565CFAD241E2C70002763CF /* SLBeersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFAC241E2C70002763CF /* SLBeersContainer.swift */; };
+		5565CFB1241E2E01002763CF /* SLBeersBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFB0241E2E01002763CF /* SLBeersBaseContainer.swift */; };
+		5565CFB3241E327F002763CF /* BeerListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5565CFB2241E327F002763CF /* BeerListStoryboard.storyboard */; };
+		5565CFB5241E3583002763CF /* BeersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFB4241E3583002763CF /* BeersCoordinator.swift */; };
+		5565CFB7241E7F80002763CF /* ExternalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFB6241E7F80002763CF /* ExternalRepository.swift */; };
+		5565CFB9241E7FEF002763CF /* ExternalRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFB8241E7FEF002763CF /* ExternalRepositoryProtocol.swift */; };
+		5568EAFC24211CF600CDB79D /* SLExternalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568EAFB24211CF600CDB79D /* SLExternalContainer.swift */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */; };
@@ -30,6 +55,9 @@
 		559C3AB4240A857C006DB5B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AB3240A857C006DB5B5 /* HomeViewController.swift */; };
 		55B2BBA224103C5D00AFC301 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 55B2BBA124103C5D00AFC301 /* SKRools */; };
 		55B2BBA42410463000AFC301 /* ForcesListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2BBA32410463000AFC301 /* ForcesListViewModelTest.swift */; };
+		55B9184A241FDECD009E86FB /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B91848241FDECD009E86FB /* BeerCollectionViewCell.swift */; };
+		55B9184B241FDECD009E86FB /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B91849241FDECD009E86FB /* BeerCollectionViewCell.xib */; };
+		55B9184D24202081009E86FB /* BeersListCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B9184C24202081009E86FB /* BeersListCollectionViewLayout.swift */; };
 		55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */; };
 		55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */; };
 		55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */; };
@@ -82,6 +110,32 @@
 		5517D8342402F34400053260 /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
 		5517D8362402F34400053260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555301A4240AB09900CF6297 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5565CF86241CF61E002763CF /* BeersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewController.swift; sourceTree = "<group>"; };
+		5565CF88241CF64D002763CF /* BeersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListModel.swift; sourceTree = "<group>"; };
+		5565CF8A241CF661002763CF /* BeersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewModel.swift; sourceTree = "<group>"; };
+		5565CF8C241CF6BB002763CF /* BeersRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRepositoryProtocol.swift; sourceTree = "<group>"; };
+		5565CF8E241CF718002763CF /* RetrieveBeersListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveBeersListUseCase.swift; sourceTree = "<group>"; };
+		5565CF90241CF737002763CF /* BeersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRepository.swift; sourceTree = "<group>"; };
+		5565CF92241D034E002763CF /* BeersEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersEntity.swift; sourceTree = "<group>"; };
+		5565CF94241D0742002763CF /* Beer+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer+Decodable.swift"; sourceTree = "<group>"; };
+		5565CF96241D0C3D002763CF /* Volume+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Volume+Decodable.swift"; sourceTree = "<group>"; };
+		5565CF9A241D0CF8002763CF /* BoilVolume+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoilVolume+Decodable.swift"; sourceTree = "<group>"; };
+		5565CF9C241D11BE002763CF /* Method+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Method+Decodable.swift"; sourceTree = "<group>"; };
+		5565CF9E241D1F98002763CF /* MashTemp+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MashTemp+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFA0241D1FB1002763CF /* Temp+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Temp+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFA2241D20DF002763CF /* Fermentation+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fermentation+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFA4241D225B002763CF /* Ingredients+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredients+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFA6241D2347002763CF /* Hops+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hops+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFA8241D235A002763CF /* Malt+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Malt+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFAA241D2485002763CF /* Amount+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Amount+Decodable.swift"; sourceTree = "<group>"; };
+		5565CFAC241E2C70002763CF /* SLBeersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLBeersContainer.swift; sourceTree = "<group>"; };
+		5565CFB0241E2E01002763CF /* SLBeersBaseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLBeersBaseContainer.swift; sourceTree = "<group>"; };
+		5565CFB2241E327F002763CF /* BeerListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerListStoryboard.storyboard; sourceTree = "<group>"; };
+		5565CFB4241E3583002763CF /* BeersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersCoordinator.swift; sourceTree = "<group>"; };
+		5565CFB6241E7F80002763CF /* ExternalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalRepository.swift; sourceTree = "<group>"; };
+		5565CFB8241E7FEF002763CF /* ExternalRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalRepositoryProtocol.swift; sourceTree = "<group>"; };
+		5568EAFB24211CF600CDB79D /* SLExternalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLExternalContainer.swift; sourceTree = "<group>"; };
+		5568EB062422C0C000CDB79D /* SKRools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKRools; path = "../Swift Pakages/SKRools"; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHomeUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -93,6 +147,9 @@
 		559C3AB1240A8531006DB5B5 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		559C3AB3240A857C006DB5B5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55B2BBA32410463000AFC301 /* ForcesListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcesListViewModelTest.swift; sourceTree = "<group>"; };
+		55B91848241FDECD009E86FB /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		55B91849241FDECD009E86FB /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
+		55B9184C24202081009E86FB /* BeersListCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListCollectionViewLayout.swift; sourceTree = "<group>"; };
 		55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesListUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrieveForcesDetailUseCase.swift; sourceTree = "<group>"; };
 		55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcesDetailEngagementEntity.swift; sourceTree = "<group>"; };
@@ -158,6 +215,7 @@
 		5517D8112402F34100053260 = {
 			isa = PBXGroup;
 			children = (
+				5568EB062422C0C000CDB79D /* SKRools */,
 				5517D81C2402F34100053260 /* MVVM */,
 				5517D8332402F34400053260 /* MVVMTests */,
 				5517D81B2402F34100053260 /* Products */,
@@ -199,6 +257,218 @@
 			path = MVVMTests;
 			sourceTree = "<group>";
 		};
+		5565CF62241CD4C9002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9A240A68D6006DB5B5 /* HomeView */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF63241CD5EB002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5BD240324B700D9235A /* ForcesDetailView */,
+				55BFD5C6240324B700D9235A /* ForcesListView */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF66241CD641002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF67241CD65B002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */,
+				55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF68241CD66E002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF69241CD677002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5B9240324B600D9235A /* ForcesEntity.swift */,
+				55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */,
+				55BFD5B8240324B600D9235A /* ForcesDetailEntity.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF6A241CD692002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF6B241CD69A002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5BB240324B700D9235A /* ForcesRepositoryProtocol.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF6C241CD6B5002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA3240A69F6006DB5B5 /* Home+Decodable.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF6D241CD6BC002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5D4240324B700D9235A /* ForcesDetail+Decodable.swift */,
+				55BFD5D5240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift */,
+				55BFD5D6240324B700D9235A /* ForcesList+Decodable.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF6E241CD6CB002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA5240A6A07006DB5B5 /* HomeRepository.swift */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF6F241CD6D3002763CF /* ForcesScene */ = {
+			isa = PBXGroup;
+			children = (
+				55BFD5D8240324B700D9235A /* ForcesRepository.swift */,
+			);
+			path = ForcesScene;
+			sourceTree = "<group>";
+		};
+		5565CF70241CD6E5002763CF /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				559C3AA8240A6AFF006DB5B5 /* HomeLocalData.json */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		5565CF71241CD7F2002763CF /* BeersScene */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF73241CD80C002763CF /* BeersDetail */,
+				5565CF72241CD7FD002763CF /* BeersList */,
+			);
+			path = BeersScene;
+			sourceTree = "<group>";
+		};
+		5565CF72241CD7FD002763CF /* BeersList */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF84241CF5BC002763CF /* Model */,
+				5565CF85241CF5C6002763CF /* View */,
+				5565CF83241CF5B3002763CF /* ViewModel */,
+			);
+			path = BeersList;
+			sourceTree = "<group>";
+		};
+		5565CF73241CD80C002763CF /* BeersDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BeersDetail;
+			sourceTree = "<group>";
+		};
+		5565CF75241CD82F002763CF /* BeersScene */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF8E241CF718002763CF /* RetrieveBeersListUseCase.swift */,
+			);
+			path = BeersScene;
+			sourceTree = "<group>";
+		};
+		5565CF78241CD84D002763CF /* BeersScene */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF92241D034E002763CF /* BeersEntity.swift */,
+			);
+			path = BeersScene;
+			sourceTree = "<group>";
+		};
+		5565CF7A241CD862002763CF /* BeersScene */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF8C241CF6BB002763CF /* BeersRepositoryProtocol.swift */,
+			);
+			path = BeersScene;
+			sourceTree = "<group>";
+		};
+		5565CF7D241CD88B002763CF /* BeersScene */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF90241CF737002763CF /* BeersRepository.swift */,
+			);
+			path = BeersScene;
+			sourceTree = "<group>";
+		};
+		5565CF80241CD8A6002763CF /* BeersScene */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF94241D0742002763CF /* Beer+Decodable.swift */,
+				5565CF96241D0C3D002763CF /* Volume+Decodable.swift */,
+				5565CF9A241D0CF8002763CF /* BoilVolume+Decodable.swift */,
+				5565CF9C241D11BE002763CF /* Method+Decodable.swift */,
+				5565CF9E241D1F98002763CF /* MashTemp+Decodable.swift */,
+				5565CFA0241D1FB1002763CF /* Temp+Decodable.swift */,
+				5565CFA2241D20DF002763CF /* Fermentation+Decodable.swift */,
+				5565CFA4241D225B002763CF /* Ingredients+Decodable.swift */,
+				5565CFA6241D2347002763CF /* Hops+Decodable.swift */,
+				5565CFA8241D235A002763CF /* Malt+Decodable.swift */,
+				5565CFAA241D2485002763CF /* Amount+Decodable.swift */,
+			);
+			path = BeersScene;
+			sourceTree = "<group>";
+		};
+		5565CF83241CF5B3002763CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF8A241CF661002763CF /* BeersListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5565CF84241CF5BC002763CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5565CF88241CF64D002763CF /* BeersListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5565CF85241CF5C6002763CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55B91847241FDEA2009E86FB /* CollectionView */,
+				5565CF86241CF61E002763CF /* BeersListViewController.swift */,
+				5565CFB2241E327F002763CF /* BeerListStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		559C3A9A240A68D6006DB5B5 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +482,7 @@
 		559C3AA7240A6ABD006DB5B5 /* LocalData */ = {
 			isa = PBXGroup;
 			children = (
-				559C3AA8240A6AFF006DB5B5 /* HomeLocalData.json */,
+				5565CF70241CD6E5002763CF /* HomeScene */,
 			);
 			path = LocalData;
 			sourceTree = "<group>";
@@ -243,6 +513,16 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		55B91847241FDEA2009E86FB /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				55B91848241FDECD009E86FB /* BeerCollectionViewCell.swift */,
+				55B91849241FDECD009E86FB /* BeerCollectionViewCell.xib */,
+				55B9184C24202081009E86FB /* BeersListCollectionViewLayout.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		55BFD5B2240324B600D9235A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,9 +536,9 @@
 		55BFD5B3240324B600D9235A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5B4240324B600D9235A /* RetrieveForcesListUseCase.swift */,
-				55BFD5B5240324B600D9235A /* RetrieveForcesDetailUseCase.swift */,
-				559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */,
+				5565CF75241CD82F002763CF /* BeersScene */,
+				5565CF67241CD65B002763CF /* ForcesScene */,
+				5565CF66241CD641002763CF /* HomeScene */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -266,10 +546,9 @@
 		55BFD5B6240324B600D9235A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5B7240324B600D9235A /* ForcesDetailEngagementEntity.swift */,
-				55BFD5B8240324B600D9235A /* ForcesDetailEntity.swift */,
-				55BFD5B9240324B600D9235A /* ForcesEntity.swift */,
-				559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */,
+				5565CF78241CD84D002763CF /* BeersScene */,
+				5565CF69241CD677002763CF /* ForcesScene */,
+				5565CF68241CD66E002763CF /* HomeScene */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -277,8 +556,10 @@
 		55BFD5BA240324B600D9235A /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5BB240324B700D9235A /* ForcesRepositoryProtocol.swift */,
-				559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */,
+				5565CF7A241CD862002763CF /* BeersScene */,
+				5565CF6B241CD69A002763CF /* ForcesScene */,
+				5565CF6A241CD692002763CF /* HomeScene */,
+				5565CFB8241E7FEF002763CF /* ExternalRepositoryProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -286,9 +567,9 @@
 		55BFD5BC240324B700D9235A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				559C3A9A240A68D6006DB5B5 /* HomeView */,
-				55BFD5BD240324B700D9235A /* ForcesDetailView */,
-				55BFD5C6240324B700D9235A /* ForcesListView */,
+				5565CF71241CD7F2002763CF /* BeersScene */,
+				5565CF63241CD5EB002763CF /* ForcesScene */,
+				5565CF62241CD4C9002763CF /* HomeScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -387,10 +668,9 @@
 		55BFD5D3240324B700D9235A /* Decodables */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5D4240324B700D9235A /* ForcesDetail+Decodable.swift */,
-				55BFD5D5240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift */,
-				55BFD5D6240324B700D9235A /* ForcesList+Decodable.swift */,
-				559C3AA3240A69F6006DB5B5 /* Home+Decodable.swift */,
+				5565CF80241CD8A6002763CF /* BeersScene */,
+				5565CF6D241CD6BC002763CF /* ForcesScene */,
+				5565CF6C241CD6B5002763CF /* HomeScene */,
 			);
 			path = Decodables;
 			sourceTree = "<group>";
@@ -398,8 +678,10 @@
 		55BFD5D7240324B700D9235A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				55BFD5D8240324B700D9235A /* ForcesRepository.swift */,
-				559C3AA5240A6A07006DB5B5 /* HomeRepository.swift */,
+				5565CF7D241CD88B002763CF /* BeersScene */,
+				5565CF6F241CD6D3002763CF /* ForcesScene */,
+				5565CF6E241CD6CB002763CF /* HomeScene */,
+				5565CFB6241E7F80002763CF /* ExternalRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -420,6 +702,7 @@
 			children = (
 				55BFD5DC240324B700D9235A /* ForcesCoordinator.swift */,
 				555301A4240AB09900CF6297 /* HomeCoordinator.swift */,
+				5565CFB4241E3583002763CF /* BeersCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -430,6 +713,9 @@
 				55179159240BABF10050E79A /* SLHomeContainer.swift */,
 				5517915B240BAED50050E79A /* SLForcesContainer.swift */,
 				5517915D240BAF8A0050E79A /* SLContainer.swift */,
+				5565CFAC241E2C70002763CF /* SLBeersContainer.swift */,
+				5565CFB0241E2E01002763CF /* SLBeersBaseContainer.swift */,
+				5568EAFB24211CF600CDB79D /* SLExternalContainer.swift */,
 			);
 			path = ServicesLocator;
 			sourceTree = "<group>";
@@ -525,7 +811,9 @@
 				55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */,
 				55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */,
 				55179169240BBCF10050E79A /* HomeCollectionViewCell.xib in Resources */,
+				5565CFB3241E327F002763CF /* BeerListStoryboard.storyboard in Resources */,
 				55BFD62624041B8700D9235A /* Main.storyboard in Resources */,
+				55B9184B241FDECD009E86FB /* BeerCollectionViewCell.xib in Resources */,
 				559C3AB2240A8531006DB5B5 /* HomeStoryboard.storyboard in Resources */,
 				5517D82A2402F34300053260 /* LaunchScreen.storyboard in Resources */,
 				5517D8272402F34300053260 /* Assets.xcassets in Resources */,
@@ -546,42 +834,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5565CF9F241D1F98002763CF /* MashTemp+Decodable.swift in Sources */,
 				559C3AA6240A6A07006DB5B5 /* HomeRepository.swift in Sources */,
 				555301A5240AB09900CF6297 /* HomeCoordinator.swift in Sources */,
+				5565CFA7241D2347002763CF /* Hops+Decodable.swift in Sources */,
 				55BFD5EC240324B700D9235A /* ForcesListViewModel.swift in Sources */,
+				5565CF8D241CF6BB002763CF /* BeersRepositoryProtocol.swift in Sources */,
 				5517915A240BABF10050E79A /* SLHomeContainer.swift in Sources */,
+				5565CFAD241E2C70002763CF /* SLBeersContainer.swift in Sources */,
+				5565CF91241CF737002763CF /* BeersRepository.swift in Sources */,
 				55BFD5F6240324B700D9235A /* Constants.swift in Sources */,
 				559C3AA2240A69CF006DB5B5 /* HomeRepositoryProtocol.swift in Sources */,
 				55BFD5E3240324B700D9235A /* ForcesDetailEngagementEntity.swift in Sources */,
 				55BFD5F8240324B700D9235A /* APIEndpoints.swift in Sources */,
+				5565CF93241D034E002763CF /* BeersEntity.swift in Sources */,
 				55BFD5F3240324B700D9235A /* ForcesDetailEngagementEntity+Decodable.swift in Sources */,
 				559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */,
 				5517915E240BAF8A0050E79A /* SLContainer.swift in Sources */,
+				5565CF87241CF61E002763CF /* BeersListViewController.swift in Sources */,
+				5565CFAB241D2485002763CF /* Amount+Decodable.swift in Sources */,
 				5517915C240BAED50050E79A /* SLForcesContainer.swift in Sources */,
 				55BFD5E2240324B700D9235A /* RetrieveForcesDetailUseCase.swift in Sources */,
 				55BFD5F0240324B700D9235A /* ForcesListViewController.swift in Sources */,
 				55BFD5F7240324B700D9235A /* ForcesCoordinator.swift in Sources */,
 				55BFD5E8240324B700D9235A /* ForcesDetailModel.swift in Sources */,
+				5565CFA3241D20DF002763CF /* Fermentation+Decodable.swift in Sources */,
 				55BFD5F2240324B700D9235A /* ForcesDetail+Decodable.swift in Sources */,
 				5517D81E2402F34100053260 /* AppDelegate.swift in Sources */,
 				55BFD5F4240324B700D9235A /* ForcesList+Decodable.swift in Sources */,
+				5565CFA1241D1FB1002763CF /* Temp+Decodable.swift in Sources */,
+				5565CF8B241CF661002763CF /* BeersListViewModel.swift in Sources */,
 				559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */,
+				5565CFB5241E3583002763CF /* BeersCoordinator.swift in Sources */,
+				55B9184A241FDECD009E86FB /* BeerCollectionViewCell.swift in Sources */,
 				55BFD5EA240324B700D9235A /* ForcesDetailViewController.swift in Sources */,
 				559C3AA4240A69F6006DB5B5 /* Home+Decodable.swift in Sources */,
+				5565CF95241D0742002763CF /* Beer+Decodable.swift in Sources */,
 				55BFD5F5240324B700D9235A /* ForcesRepository.swift in Sources */,
 				55179168240BBCF10050E79A /* HomeCollectionViewCell.swift in Sources */,
 				559C3AB4240A857C006DB5B5 /* HomeViewController.swift in Sources */,
+				5568EAFC24211CF600CDB79D /* SLExternalContainer.swift in Sources */,
+				5565CFB9241E7FEF002763CF /* ExternalRepositoryProtocol.swift in Sources */,
 				55BFD5ED240324B700D9235A /* ForcesListModel.swift in Sources */,
+				5565CF89241CF64D002763CF /* BeersListModel.swift in Sources */,
+				5565CFB1241E2E01002763CF /* SLBeersBaseContainer.swift in Sources */,
 				55BFD5E5240324B700D9235A /* ForcesEntity.swift in Sources */,
 				55179163240BB9E70050E79A /* HomeCollectionViewLayout.swift in Sources */,
 				559C3AAE240A787F006DB5B5 /* HomeModel.swift in Sources */,
+				5565CF9D241D11BE002763CF /* Method+Decodable.swift in Sources */,
 				55BFD5EE240324B700D9235A /* ForcesListTableViewCell.swift in Sources */,
+				5565CF8F241CF718002763CF /* RetrieveBeersListUseCase.swift in Sources */,
 				55BFD5E6240324B700D9235A /* ForcesRepositoryProtocol.swift in Sources */,
 				55BFD5E4240324B700D9235A /* ForcesDetailEntity.swift in Sources */,
 				55BFD5E1240324B700D9235A /* RetrieveForcesListUseCase.swift in Sources */,
+				5565CFA5241D225B002763CF /* Ingredients+Decodable.swift in Sources */,
+				55B9184D24202081009E86FB /* BeersListCollectionViewLayout.swift in Sources */,
 				55BFD5E7240324B700D9235A /* ForcesDetailViewModel.swift in Sources */,
+				5565CF97241D0C3D002763CF /* Volume+Decodable.swift in Sources */,
 				55BFD5E9240324B700D9235A /* ForcesDetailEngagementModel.swift in Sources */,
 				559C3AB0240A788E006DB5B5 /* HomeViewModel.swift in Sources */,
+				5565CFA9241D235A002763CF /* Malt+Decodable.swift in Sources */,
+				5565CFB7241E7F80002763CF /* ExternalRepository.swift in Sources */,
+				5565CF9B241D0CF8002763CF /* BoilVolume+Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +1059,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKK8JZ62EV;
 				INFOPLIST_FILE = MVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -763,6 +1078,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YKK8JZ62EV;
 				INFOPLIST_FILE = MVVM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

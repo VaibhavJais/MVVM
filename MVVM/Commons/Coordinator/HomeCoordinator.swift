@@ -23,6 +23,9 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         vc.forcesList = { [weak self] in
             self?.forcesSubscription()
         }
+        vc.beersList = { [weak self] in
+            self?.beersSubscription()
+        }
         navigationController.delegate = self
         navigationController.pushViewController(vc, animated: false)
     }
@@ -32,6 +35,13 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         child.parentCoordinator = self
         childCoordinators.append(child)
         child.start()
+    }
+
+    func beersSubscription() {
+          let child = BeersCoordinator(navigationController: navigationController)
+          child.parentCoordinator = self
+          childCoordinators.append(child)
+          child.start()
     }
 
     func childDidFinish(_ child: Coordinator?) {
@@ -58,6 +68,11 @@ class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
             childDidFinish(forcesListViewController.coordinator)
             forcesListViewController.viewModel = nil
             forcesListViewController.coordinator = nil
+        }
+        if let beersListViewController = fromViewController as? BeersListViewController {
+            childDidFinish(beersListViewController.coordinator)
+            beersListViewController.viewModel = nil
+            beersListViewController.coordinator = nil
         }
     }
 }
