@@ -24,6 +24,9 @@ protocol BeerModel {
     var name: String? { get }
     var tagline: String? { get }
     var imageUrl: String? { get }
+    var abv: String? { get }
+    var ebc: String? { get }
+    var ibu: String? { get }
     var image: Box<Data?> { get set }
 }
 
@@ -31,6 +34,9 @@ struct DefaultBeerModel: BeerModel {
     let name: String?
     let imageUrl: String?
     let tagline: String?
+    let abv: String?
+    let ebc: String?
+    let ibu: String?
     var image: Box<Data?>
 
     init(beer: BeerEntity) {
@@ -38,6 +44,9 @@ struct DefaultBeerModel: BeerModel {
         self.imageUrl = beer.imageUrl
         self.tagline = beer.tagline
         self.image = Box(nil)
+        self.abv = "\(beer.abv ?? 0.0)%"
+        self.ibu = "\(beer.ibu ?? 0.0)%"
+        self.ebc = String(format: "%.0f", beer.ebc ?? 0)
     }
 }
 

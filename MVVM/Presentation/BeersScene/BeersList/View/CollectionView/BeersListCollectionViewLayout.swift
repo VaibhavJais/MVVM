@@ -16,7 +16,7 @@ final class BeersListCollectionViewLayout: UICollectionViewFlowLayout {
         static let defaultCellHeight: CGFloat = 128
         static let leftMargin: CGFloat = 20
         static let rightMargin: CGFloat = 20
-        static let topMargin: CGFloat = 25
+        static let topMargin: CGFloat = 4
         static let bottomMargin: CGFloat = 20
         static let margins: CGFloat = 30
     }

@@ -26,6 +26,7 @@ extension DefaultExternalRepository: ExternalRepository {
     func image(with imageUrl: String, completion: @escaping (Result<Data, Error>) -> Void) -> Cancellable? {
 
         let endpoint = APIEndpoints.image(url: imageUrl)
+        endpoint.isFullPath = true
         let networkTask = dataTransferService.request(with: endpoint) { [weak self] (response: Result<Data, Error>) in
             guard let strongSelf = self else { return }
 

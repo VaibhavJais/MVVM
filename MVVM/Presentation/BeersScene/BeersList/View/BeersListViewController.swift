@@ -28,31 +28,38 @@ class BeersListViewController: UIViewController, Storyboarded {
         
         return cv
     }()
-    private let titleLbl: UILabel = {
-        let lbl = UILabel(frame: .zero)
-        lbl.font = UIFont(name: Constants.fontName, size: 30)
-        lbl.backgroundColor = .white
-        lbl.textAlignment = .center
-        lbl.numberOfLines = 1
-        lbl.textColor = .black
-        lbl.adjustsFontSizeToFitWidth = true
-        
-        return lbl
-    }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.viewDidLoad()
         setupView()
         setupBinding()
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+         self.title = "Beers List"
+    }
+
     func setupBinding() {
         viewModel?.items.bind(listener: { [weak self]  items in
             guard let items = items else { return }
-            self?.titleLbl.text = "Beers List"
             self?.model = items
             self?.collectionView.reloadData()
+        })
+
+        viewModel?.loadingStatus.bind(listener: { [weak self] (status) in
+            switch status {
+            case .start:
+                DispatchQueue.main.async {
+                    self?.showSpinnerView()
+                }
+            default:
+                DispatchQueue.main.async {
+                    self?.hideSpinnerView()
+                }
+            }
         })
     }
 }
@@ -60,8 +67,6 @@ class BeersListViewController: UIViewController, Storyboarded {
 // MARK: - Setup View
 extension BeersListViewController {
     private func setupView() {
-        view.addSubview(titleLbl)
-        setupTitleConstraints()
         collectionView.register(UINib(nibName: Constants.cellName,
                                       bundle: nil ),
                                 forCellWithReuseIdentifier: Constants.cellIdentifier)
@@ -85,40 +90,36 @@ extension BeersListViewController: UICollectionViewDataSource {
         }
         
         cell.data = model?.items?[indexPath.row]
-        let backgroundQueue = DispatchQueue(label: "backgroundQueue",
+
+        if let data = cell.data?.image.value {
+            DispatchQueue.main.async() {
+                cell.beerImage.image = UIImage(data: data)
+            }
+            return cell
+        }
+
+        let backgroundQueue = DispatchQueue(label: "bQueue",
                                             qos: .background,
                                             attributes: .concurrent,
                                             autoreleaseFrequency: .inherit,
                                             target: nil)
 
-
         backgroundQueue.async { [weak self] in
-
             cell.data?.image.bind(listener: { (data) in
                 guard let data = data else { return }
-                cell.beerImage.image = UIImage(data: data)
+                DispatchQueue.main.async() {
+                    cell.beerImage.image = UIImage(data: data)
+                }
             })
-
-            self?.viewModel?.image(url: cell.data?.imageUrl, index: indexPath.row)
-
-//            if let imageUrl = cell.data?.imageUrl,
-//                let url = URL(string: imageUrl) {
-//                if let imageData = try? Data(contentsOf: url) {
-//                    DispatchQueue.main.async() {
-//                        cell.beerImage.image = UIImage(data: imageData)
-//                    }
-//                }
-//            }
+            cell.downloadTask = self?.viewModel?.image(url: cell.data?.imageUrl, index: indexPath.row)
         }
-
         return cell
     }
-    
 }
 
-// MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDelegate
 extension BeersListViewController: UICollectionViewDelegate {
-    
+    // TODO: Implement user action
 }
 
 
@@ -126,17 +127,22 @@ extension BeersListViewController: UICollectionViewDelegate {
 private extension BeersListViewController {
     private func setupCollectionConstraints() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.topAnchor.constraint(equalTo: titleLbl.bottomAnchor, constant: 20).isActive = true
+        collectionView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
-    
-    private func setupTitleConstraints() {
-        titleLbl.translatesAutoresizingMaskIntoConstraints = false
-        titleLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 30.0).isActive = true
-        titleLbl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20.0).isActive = true
-        titleLbl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20.0).isActive = true
-        titleLbl.heightAnchor.constraint(equalToConstant: 30).isActive = true
+}
+
+
+// MARK: - Spinner
+extension BeersListViewController {
+    // TODO: Implement Spinner
+    func showSpinnerView() {
+
+    }
+
+    func hideSpinnerView() {
+
     }
 }

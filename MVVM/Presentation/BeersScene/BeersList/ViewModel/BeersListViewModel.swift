@@ -14,7 +14,7 @@ protocol BeersListViewModel: BeersListViewModelInput, BeersListViewModelOutput {
 protocol BeersListViewModelInput {
     func viewDidLoad()
     func updateView()
-    func image(url: String?, index: Int)
+    func image(url: String?, index: Int) -> Cancellable?
 }
 
 protocol BeersListViewModelOutput {
@@ -36,8 +36,8 @@ final class DefaultBeersListViewModel {
     }
 
     func viewDidLoad() {
-         updateView()
-     }
+        updateView()
+    }
 }
 
 // MARK: Update View
@@ -58,12 +58,13 @@ extension DefaultBeersListViewModel: BeersListViewModel {
 
 // MARK: - Images
 extension DefaultBeersListViewModel {
-    func image(url: String?, index: Int) {
+    func image(url: String?, index: Int) -> Cancellable? {
         self.loadingStatus.value = .start
         guard let url = url else {
-            return
+
+            return nil
         }
-        _ = beersListUseCase.image(with: url, completion: { (result) in
+        return beersListUseCase.image(with: url, completion: { (result) in
             switch result {
             case .success(let imageData):
                 self.items.value?.items?[index].image.value = imageData

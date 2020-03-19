@@ -23,4 +23,12 @@ public enum Constants {
     static let forcesListStoryboard = "Main"
     static let forcesDetailStoryboard = "ForcesDetailStoryboard"
     static let beersListStoryboard = "BeerListStoryboard"
+
+    // TODO: Move this constants to Beer scene
+    // MARK: - Fonts
+    static let fontTitle = "Verdana-bold"
+    static let fontDescription = "Verdana"
+
+    // MARK: - Default Images
+    static let defaultImage = "beerGreen"
 }

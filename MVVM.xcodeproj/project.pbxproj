@@ -135,6 +135,7 @@
 		5565CFB6241E7F80002763CF /* ExternalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalRepository.swift; sourceTree = "<group>"; };
 		5565CFB8241E7FEF002763CF /* ExternalRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalRepositoryProtocol.swift; sourceTree = "<group>"; };
 		5568EAFB24211CF600CDB79D /* SLExternalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLExternalContainer.swift; sourceTree = "<group>"; };
+		5568EB062422C0C000CDB79D /* SKRools */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SKRools; path = "../Swift Pakages/SKRools"; sourceTree = "<group>"; };
 		559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHomeUseCase.swift; sourceTree = "<group>"; };
 		559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 		5517D8112402F34100053260 = {
 			isa = PBXGroup;
 			children = (
+				5568EB062422C0C000CDB79D /* SKRools */,
 				5517D81C2402F34100053260 /* MVVM */,
 				5517D8332402F34400053260 /* MVVMTests */,
 				5517D81B2402F34100053260 /* Products */,
