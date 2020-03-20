@@ -8,6 +8,7 @@
 
 import Foundation
 import SKRools
+import UIKit
 
 protocol BeersListViewModel: BeersListViewModelInput, BeersListViewModelOutput {}
 
@@ -20,7 +21,7 @@ protocol BeersListViewModelInput {
 protocol BeersListViewModelOutput {
     var items: Box<BeersListModel?> { get }
     var loadingStatus: Box<LoadingStatus?> { get }
-    var error: Error? { get }
+    var error: Box<Error?> { get }
 }
 
 final class DefaultBeersListViewModel {
@@ -28,7 +29,7 @@ final class DefaultBeersListViewModel {
     private var beersLoadTask: Cancellable? { willSet { beersLoadTask?.cancel() }}
     var items: Box<BeersListModel?> = Box(nil)
     var loadingStatus: Box<LoadingStatus?> = Box(.stop)
-    var error: Error?
+    var error: Box<Error?> = Box(nil)
 
     @discardableResult
     init(beersListUseCase: BeersListUseCase) {
@@ -50,8 +51,9 @@ extension DefaultBeersListViewModel: BeersListViewModel {
                 let beers = beers.map { DefaultBeerModel(beer: $0) }
                 self.items.value = DefaultBeersListModel(beers: beers)
             case .failure(let error):
-                print("ERROR: \(error)")
+                self.error.value = error
             }
+            self.loadingStatus.value = .stop
         })
     }
 }
@@ -59,17 +61,13 @@ extension DefaultBeersListViewModel: BeersListViewModel {
 // MARK: - Images
 extension DefaultBeersListViewModel {
     func image(url: String?, index: Int) -> Cancellable? {
-        self.loadingStatus.value = .start
-        guard let url = url else {
-
-            return nil
-        }
+        guard let url = url else { return nil }
         return beersListUseCase.image(with: url, completion: { (result) in
             switch result {
             case .success(let imageData):
                 self.items.value?.items?[index].image.value = imageData
-            case .failure(let error):
-                print("ERROR: \(error)")
+            case .failure(let error ):
+              print("image error: \(error)")
             }
         })
     }

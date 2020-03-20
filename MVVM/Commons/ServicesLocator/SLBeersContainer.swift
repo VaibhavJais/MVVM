@@ -8,6 +8,7 @@
 
 import Foundation
 import SKRools
+import UIKit
 
 protocol SLBeersContainer {
     func beersListView() -> BeersListViewController
@@ -27,6 +28,11 @@ private extension DefaultSLBeersContainer {
     }
 
     private func makeExternalRepository() -> ExternalRepository {
+        if let asset = UIImage(named: Constants.notFoundImage) {
+            return DefaultExternalRepository(dataTransferService: makeDataTransferService(),
+                                             imageNotFoundData: asset.pngData())
+
+        }
         return DefaultExternalRepository(dataTransferService: makeDataTransferService(),
                                          imageNotFoundData: nil)
     }

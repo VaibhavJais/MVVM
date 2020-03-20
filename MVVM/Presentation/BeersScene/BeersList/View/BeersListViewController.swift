@@ -20,6 +20,7 @@ class BeersListViewController: UIViewController, Storyboarded {
     private var model: BeersListModel?
     var viewModel: BeersListViewModel?
     weak var coordinator: BeersCoordinator?
+    let spinnerView = SpinnerViewController()
     private let collectionView: UICollectionView = {
         let layout = BeersListCollectionViewLayout()
         layout.scrollDirection = .vertical
@@ -39,7 +40,7 @@ class BeersListViewController: UIViewController, Storyboarded {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-         self.title = "Beers List"
+        self.title = "Beers List"
     }
 
     func setupBinding() {
@@ -50,16 +51,19 @@ class BeersListViewController: UIViewController, Storyboarded {
         })
 
         viewModel?.loadingStatus.bind(listener: { [weak self] (status) in
-            switch status {
-            case .start:
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                guard let status = status else { return }
+                switch status {
+                case .start:
                     self?.showSpinnerView()
-                }
-            default:
-                DispatchQueue.main.async {
+                default:
                     self?.hideSpinnerView()
                 }
             }
+        })
+
+        viewModel?.error.bind(listener: { (error) in
+            
         })
     }
 }
@@ -139,10 +143,16 @@ private extension BeersListViewController {
 extension BeersListViewController {
     // TODO: Implement Spinner
     func showSpinnerView() {
-
+        addChild(spinnerView)
+        spinnerView.view.frame = view.frame
+        view.addSubview(spinnerView.view)
+        spinnerView.didMove(toParent: self)
     }
 
     func hideSpinnerView() {
-
+        spinnerView.willMove(toParent: nil)
+        spinnerView.view.removeFromSuperview()
+        spinnerView.removeFromParent()
     }
 }
+

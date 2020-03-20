@@ -8,12 +8,12 @@
 
 import Foundation
 import SKRools
+import UIKit
 
 final class DefaultExternalRepository {
 
     private let dataTransferService: DataTransferService
     private let imageNotFoundData: Data?
-
 
     init(dataTransferService: DataTransferService,
     imageNotFoundData: Data?) {
@@ -27,21 +27,28 @@ extension DefaultExternalRepository: ExternalRepository {
 
         let endpoint = APIEndpoints.image(url: imageUrl)
         endpoint.isFullPath = true
-        let networkTask = dataTransferService.request(with: endpoint) { [weak self] (response: Result<Data, Error>) in
+        let networkTask = dataTransferService.request(with: endpoint) { [weak self] (result) in
             guard let strongSelf = self else { return }
-
-            switch response {
+            switch result {
             case .success(let data):
-                completion(.success(data))
-                return
+                // TODO: Check in another way, if the data is an image or not, to be able to eliminate the UIKit import in this class
+                if let _ = UIImage(data: data) {
+                    completion(.success(data))
+                } else {
+                    if let imageNotFound = self?.imageNotFoundData {
+                        completion(.success(imageNotFound))
+                    } else {
+                        // TODO: Implement custom error, "default image not found, not found xD)
+                    }
+                }
+
             case .failure(let error):
                 if case let DataTransferError.networkFailure(networkError) = error, networkError.isNotFoundError,
                     let imageNotFoundData = strongSelf.imageNotFoundData {
                     completion(.success(imageNotFoundData))
-                    return
+                } else {
+                    completion(.failure(error))
                 }
-                completion(.failure(error))
-                return
             }
         }
         return RepositoryTask(networkTask: networkTask)

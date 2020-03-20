@@ -31,4 +31,5 @@ public enum Constants {
 
     // MARK: - Default Images
     static let defaultImage = "beerGreen"
+    static let notFoundImage = "imageError"
 }
