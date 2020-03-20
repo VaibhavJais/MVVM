@@ -43,6 +43,7 @@
 		5565CFB7241E7F80002763CF /* ExternalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFB6241E7F80002763CF /* ExternalRepository.swift */; };
 		5565CFB9241E7FEF002763CF /* ExternalRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565CFB8241E7FEF002763CF /* ExternalRepositoryProtocol.swift */; };
 		5568EAFC24211CF600CDB79D /* SLExternalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568EAFB24211CF600CDB79D /* SLExternalContainer.swift */; };
+		5568EB0B2425197400CDB79D /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 5568EB0A2425197400CDB79D /* SKRools */; };
 		559C3A9E240A6979006DB5B5 /* RetrieveHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9D240A6979006DB5B5 /* RetrieveHomeUseCase.swift */; };
 		559C3AA0240A69AF006DB5B5 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3A9F240A69AF006DB5B5 /* HomeEntity.swift */; };
 		559C3AA2240A69CF006DB5B5 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AA1240A69CF006DB5B5 /* HomeRepositoryProtocol.swift */; };
@@ -53,7 +54,6 @@
 		559C3AB0240A788E006DB5B5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AAF240A788E006DB5B5 /* HomeViewModel.swift */; };
 		559C3AB2240A8531006DB5B5 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559C3AB1240A8531006DB5B5 /* HomeStoryboard.storyboard */; };
 		559C3AB4240A857C006DB5B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559C3AB3240A857C006DB5B5 /* HomeViewController.swift */; };
-		55B2BBA224103C5D00AFC301 /* SKRools in Frameworks */ = {isa = PBXBuildFile; productRef = 55B2BBA124103C5D00AFC301 /* SKRools */; };
 		55B2BBA42410463000AFC301 /* ForcesListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B2BBA32410463000AFC301 /* ForcesListViewModelTest.swift */; };
 		55B9184A241FDECD009E86FB /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B91848241FDECD009E86FB /* BeerCollectionViewCell.swift */; };
 		55B9184B241FDECD009E86FB /* BeerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B91849241FDECD009E86FB /* BeerCollectionViewCell.xib */; };
@@ -180,7 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B2BBA224103C5D00AFC301 /* SKRools in Frameworks */,
+				5568EB0B2425197400CDB79D /* SKRools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,7 +735,7 @@
 			);
 			name = MVVM;
 			packageProductDependencies = (
-				55B2BBA124103C5D00AFC301 /* SKRools */,
+				5568EB0A2425197400CDB79D /* SKRools */,
 			);
 			productName = MVVM;
 			productReference = 5517D81A2402F34100053260 /* MVVM.app */;
@@ -1176,7 +1176,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		55B2BBA124103C5D00AFC301 /* SKRools */ = {
+		5568EB0A2425197400CDB79D /* SKRools */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 55B2BBA024103C5D00AFC301 /* XCRemoteSwiftPackageReference "SKRools" */;
 			productName = SKRools;
