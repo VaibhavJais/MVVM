@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Method: Decodable {
+extension BeerMethod: Decodable {
     private enum CodingKeys: String, CodingKey {
         case mashTemp = "mash_temp"
         case fermentation
