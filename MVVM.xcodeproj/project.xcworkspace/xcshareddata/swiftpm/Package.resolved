@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "11928850d7273a8cd41bb766f2fc93b4d724b79b",
-          "version": "5.0.4"
+          "revision": "b02c4ee7f1659090f7ac543c022f922beeb04bc6",
+          "version": "5.0.2"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/cardona/SKRools.git",
         "state": {
           "branch": "develop",
-          "revision": "1158048db6f80ae97c8ae37ee5bca3f68a6023ad",
+          "revision": "9c4700612d118b58d58b47423ee600e1b5e43d10",
           "version": null
         }
       }
