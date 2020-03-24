@@ -31,7 +31,7 @@ struct BeerEntity {
     let attenuationLevel: Float?
     let volume: Volume?
     let boilVolume: BoilVolume?
-    let method: Method?
+    let method: BeerMethod?
     let ingredients: Ingredients?
     let foodPairing: [String]?
     let brewersTips: String?
@@ -49,7 +49,7 @@ struct BoilVolume {
     let unit: String?
 }
 
-struct Method {
+struct BeerMethod {
     let mashTemp: [MashTemp]?
     let fermentation: Fermentatiom?
     let twist: String?

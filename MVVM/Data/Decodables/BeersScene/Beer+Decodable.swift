@@ -52,7 +52,7 @@ extension BeerEntity: Decodable {
         self.attenuationLevel = try container.decodeIfPresent(Float.self, forKey: .attenuationLevel)
         self.volume = try? container.decodeIfPresent(Volume.self, forKey: .volume)
         self.boilVolume = try? container.decodeIfPresent(BoilVolume.self, forKey: .boilVolume)
-        self.method = try? container.decodeIfPresent(Method.self, forKey: .method)
+        self.method = try? container.decodeIfPresent(BeerMethod.self, forKey: .method)
         self.ingredients = try? container.decodeIfPresent(Ingredients.self, forKey: .ingredients)
         self.foodPairing = try? container.decodeIfPresent([String].self, forKey: .foodPairing)
         self.brewersTips = try? container.decodeIfPresent(String.self, forKey: .brewersTips)
