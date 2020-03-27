@@ -255,11 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				5517D8362402F34400053260 /* Info.plist */,
-				55B2BBA32410463000AFC301 /* ForcesListViewModelTest.swift */,
-				5568EB0C2425254700CDB79D /* BeerListViewModelTest.swift */,
-				5583F87A242E6F730025FDF7 /* BeersListUseCaseTest.swift */,
-				5583F87E242E761D0025FDF7 /* LocalAssetsTest.swift */,
-				5583F882242E7D580025FDF7 /* BeersMock.swift */,
+				558C99E7242E9C3300452F0B /* Mocks */,
+				558C99EA242E9C8600452F0B /* Common */,
+				558C99E9242E9C5900452F0B /* Presetation */,
+				558C99E8242E9C4D00452F0B /* Domain */,
 			);
 			path = MVVMTests;
 			sourceTree = "<group>";
@@ -474,6 +473,39 @@
 				5565CFB2241E327F002763CF /* BeerListStoryboard.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		558C99E7242E9C3300452F0B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5583F882242E7D580025FDF7 /* BeersMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		558C99E8242E9C4D00452F0B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5583F87A242E6F730025FDF7 /* BeersListUseCaseTest.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		558C99E9242E9C5900452F0B /* Presetation */ = {
+			isa = PBXGroup;
+			children = (
+				5568EB0C2425254700CDB79D /* BeerListViewModelTest.swift */,
+				55B2BBA32410463000AFC301 /* ForcesListViewModelTest.swift */,
+			);
+			path = Presetation;
+			sourceTree = "<group>";
+		};
+		558C99EA242E9C8600452F0B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5583F87E242E761D0025FDF7 /* LocalAssetsTest.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		559C3A9A240A68D6006DB5B5 /* HomeView */ = {
