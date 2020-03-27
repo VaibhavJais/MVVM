@@ -52,6 +52,7 @@ class BeerListViewModelTest: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
         XCTAssertNotNil(viewModel.items.value)
         XCTAssertNil(viewModel.error.value)
+        XCTAssert(viewModel.loadingStatus.value == .stop)
     }
 
     func testWhenDataReturnsError() {
@@ -69,6 +70,7 @@ class BeerListViewModelTest: XCTestCase {
         waitForExpectations(timeout: 10, handler: nil)
         XCTAssertNil(viewModel.items.value)
         XCTAssertNotNil(viewModel.error.value)
+        XCTAssert(viewModel.loadingStatus.value == .stop)
     }
 }
 
