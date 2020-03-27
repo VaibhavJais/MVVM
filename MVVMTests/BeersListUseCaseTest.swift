@@ -55,19 +55,16 @@ class BeersListUseCaseTest: XCTestCase {
 
     class BeerRepositorySuccessMock: BeersRepository {
         func beersList(completion: @escaping (Result<[BeerEntity], Error>) -> Void) -> Cancellable? {
-            completion(.success(makeBeerListEntityMock()))
+            completion(.success(BeersMock.makeBeerListEntityMock()))
             return nil
         }
     }
 
     func testExternalUseCase_whenSuccessfully() {
-        // given
         let useCase = DefaultBeersListUseCase(beersRepository: BeerRepositorySuccessMock(),
                                               externalRepository: ExternalRepositorySuccessMock())
 
-        // when
         _ = useCase.image(with: "", completion: { (result) in
-            // Then
             switch result {
             case .success(let data):
                 XCTAssertNotNil(data)
@@ -78,13 +75,10 @@ class BeersListUseCaseTest: XCTestCase {
     }
 
     func testExternalUseCase_whenFailure() {
-        // given
         let useCase = DefaultBeersListUseCase(beersRepository: BeerRepositorySuccessMock(),
                                               externalRepository: ExternalRepositoryFailureMock())
 
-        // when
         _ = useCase.image(with: "", completion: { (result) in
-            // Then
             switch result {
             case .success(let data):
                 XCTAssertNil(data)
@@ -95,12 +89,10 @@ class BeersListUseCaseTest: XCTestCase {
     }
 
     func testBeerListUseCase_whenSuccessfully() {
-        // given
         let useCase = DefaultBeersListUseCase(beersRepository: BeerRepositorySuccessMock(),
                                               externalRepository: ExternalRepositorySuccessMock())
 
         _ = useCase.execute(completion: { (result) in
-            // Then
             switch result {
             case .success(let data):
                 XCTAssertNotNil(data)
@@ -111,13 +103,10 @@ class BeersListUseCaseTest: XCTestCase {
     }
 
     func testBeerListExternalUseCase_whenFailure() {
-        // given
         let useCase = DefaultBeersListUseCase(beersRepository: BeerRepositoryFailureMock(),
                                               externalRepository: ExternalRepositorySuccessMock())
 
-        // when
         _ = useCase.execute(completion: { (result) in
-            // Then
             switch result {
             case .success(let data):
                 XCTAssertNil(data)
@@ -126,41 +115,14 @@ class BeersListUseCaseTest: XCTestCase {
             }
         })
     }
-}
 
-extension BeersRepository {
-    func makeBeerListEntityMock() -> [BeerEntity] {
-        let volume = Volume(value: 1, unit: "kg")
-        let boil = BoilVolume(value: 2, unit: "kg")
-        let temp = Temp(value: 1, unit: "c")
-        let mashTemp = MashTemp(temp: temp, duration: 3)
-        let fermentation = Fermentatiom(temp: temp)
-        let beerMethod = BeerMethod(mashTemp: [mashTemp], fermentation: fermentation, twist: "twist")
-        let amount = Amount(value: 2.3, unit: "kg")
-        let malt = Malt(name: "malt name", amount: amount)
-        let hops = Hops(name: "hop name", amount: amount, add: "no", attribute: "attribu")
-        let ingredients = Ingredients(malt: [malt], hops: [hops], yeast: "yeast")
-        let beerA = BeerEntity(identifier: "123",
-                               name: "Beer Test",
-                               tagline: "Tag line",
-                               firstBrewed: "21/2209",
-                               description: "beer description",
-                               imageUrl: "http://fake.url",
-                               abv: 21.0,
-                               ibu: 12.9,
-                               targetFg: 10,
-                               targetOg: 20,
-                               ebc: 2.3,
-                               srm: 1.2,
-                               ph: 4.3,
-                               attenuationLevel: 4.4,
-                               volume: volume,
-                               boilVolume: boil,
-                               method: beerMethod,
-                               ingredients: ingredients,
-                               foodPairing: ["chees"],
-                               brewersTips: "tips",
-                               contributedBy: "contr")
-        return [beerA]
+    func testBeerDecoding_whenSuccess() throws {
+        let result = try JSONDecoder().decode(BeerEntity.self, from: BeersMock.makeBeersListJsonMock())
+        let beer = DefaultBeerModel(beer: result)
+        let beerList = DefaultBeersListModel(beers: [beer])
+
+        XCTAssertNotNil(result)
+        XCTAssertNotNil(beer)
+        XCTAssertNotNil(beerList)
     }
 }
