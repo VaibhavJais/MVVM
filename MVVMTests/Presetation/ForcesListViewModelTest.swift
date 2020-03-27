@@ -40,17 +40,14 @@ class ForcesListViewModelTest: XCTestCase {
     }
 
     func testWhenAPIReturnAllData() {
-        // Given
         let forcesListUseCaseMock = ForcesListUseCseMock()
         forcesListUseCaseMock.expt = self.expectation(description: "All OK")
         forcesListUseCaseMock.error = nil
 
         let viewModel = DefaultForcesListViewModel(forceListUseCase: forcesListUseCaseMock)
 
-        // When
         viewModel.updateView()
 
-        // Then
         waitForExpectations(timeout: 10, handler: nil)
         XCTAssertNotNil(viewModel.items)
         XCTAssertNil(viewModel.error)
@@ -58,17 +55,14 @@ class ForcesListViewModelTest: XCTestCase {
 
 
     func testWhenDataReturnsError() {
-        // Given
         let forcesListUseCaseMock = ForcesListUseCseMock()
         forcesListUseCaseMock.expt = self.expectation(description: "Error")
         forcesListUseCaseMock.error = ErrorMock.error
 
         let viewModel = DefaultForcesListViewModel(forceListUseCase: forcesListUseCaseMock)
 
-        // When
         viewModel.updateView()
 
-        // Then
         waitForExpectations(timeout: 10, handler: nil)
         XCTAssertNotNil(viewModel.error)
     }
