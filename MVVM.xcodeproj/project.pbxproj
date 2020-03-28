@@ -85,6 +85,8 @@
 		55BFD62624041B8700D9235A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5D0240324B700D9235A /* Main.storyboard */; };
 		55BFD62724041B9200D9235A /* ForcesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5CE240324B700D9235A /* ForcesListTableViewCell.xib */; };
 		55BFD62824041BC300D9235A /* ForcesDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BFD5C5240324B700D9235A /* ForcesDetailStoryboard.storyboard */; };
+		55F73AF4242F51FE0014C1C5 /* ForcesListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F73AF3242F51FE0014C1C5 /* ForcesListUseCaseTest.swift */; };
+		55F73AF6242F53930014C1C5 /* ForcesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F73AF5242F53930014C1C5 /* ForcesMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +181,8 @@
 		55BFD5DA240324B700D9235A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55BFD5DC240324B700D9235A /* ForcesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcesCoordinator.swift; sourceTree = "<group>"; };
 		55BFD5DD240324B700D9235A /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		55F73AF3242F51FE0014C1C5 /* ForcesListUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcesListUseCaseTest.swift; sourceTree = "<group>"; };
+		55F73AF5242F53930014C1C5 /* ForcesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcesMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				5583F882242E7D580025FDF7 /* BeersMock.swift */,
+				55F73AF5242F53930014C1C5 /* ForcesMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				5583F87A242E6F730025FDF7 /* BeersListUseCaseTest.swift */,
+				55F73AF3242F51FE0014C1C5 /* ForcesListUseCaseTest.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -943,10 +949,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5583F883242E7D580025FDF7 /* BeersMock.swift in Sources */,
+				55F73AF4242F51FE0014C1C5 /* ForcesListUseCaseTest.swift in Sources */,
 				55B2BBA42410463000AFC301 /* ForcesListViewModelTest.swift in Sources */,
 				5583F87F242E761D0025FDF7 /* LocalAssetsTest.swift in Sources */,
 				5568EB0D2425254700CDB79D /* BeerListViewModelTest.swift in Sources */,
 				5583F87B242E6F730025FDF7 /* BeersListUseCaseTest.swift in Sources */,
+				55F73AF6242F53930014C1C5 /* ForcesMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
