@@ -34,7 +34,6 @@ class ForcesListViewModelTest: XCTestCase {
                 completion(.success(forcesMock))
             }
 
-            expt?.fulfill()
             return nil
         }
     }
@@ -46,11 +45,17 @@ class ForcesListViewModelTest: XCTestCase {
 
         let viewModel = DefaultForcesListViewModel(forceListUseCase: forcesListUseCaseMock)
 
+        viewModel.items.bind { (model) in
+            guard let _ = model else { return }
+            forcesListUseCaseMock.expt?.fulfill()
+        }
+        
         viewModel.updateView()
 
         waitForExpectations(timeout: 10, handler: nil)
-        XCTAssertNotNil(viewModel.items)
-        XCTAssertNil(viewModel.error)
+        XCTAssertNotNil(viewModel.items.value)
+        XCTAssertNil(viewModel.error.value)
+        XCTAssert(viewModel.loadingStatus.value == .stop)
     }
 
 
@@ -61,10 +66,17 @@ class ForcesListViewModelTest: XCTestCase {
 
         let viewModel = DefaultForcesListViewModel(forceListUseCase: forcesListUseCaseMock)
 
+        viewModel.error.bind { (error) in
+            guard let _ = error else { return }
+            forcesListUseCaseMock.expt?.fulfill()
+        }
+
         viewModel.updateView()
 
         waitForExpectations(timeout: 10, handler: nil)
-        XCTAssertNotNil(viewModel.error)
+        XCTAssertNil(viewModel.items.value)
+        XCTAssertNotNil(viewModel.error.value)
+        XCTAssert(viewModel.loadingStatus.value == .stop)
     }
 
 }

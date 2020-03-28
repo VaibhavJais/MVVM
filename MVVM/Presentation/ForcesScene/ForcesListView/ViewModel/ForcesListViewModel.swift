@@ -23,7 +23,7 @@ protocol ForcesListViewModelInput {
 protocol ForcesListViewModelOutput {
     var items: Box<[ForcesListModel]?> { get }
     var loadingStatus: Box<LoadingStatus> { get }
-    var error: Error? { get }
+    var error: Box<Error?> { get }
 }
 
 // MARK: - DefaultForcesListViewModel
@@ -31,7 +31,7 @@ final class DefaultForcesListViewModel {
     private let forcesListUseCase: ForcesListUseCase
     private var forcesLoadTask: Cancellable? { willSet { forcesLoadTask?.cancel() } }
     let items: Box<[ForcesListModel]?> = Box(nil)
-    var error: Error?
+    var error: Box<Error?> = Box(nil)
     var loadingStatus: Box<LoadingStatus> = Box(.stop)
 
     @discardableResult
@@ -65,7 +65,8 @@ extension DefaultForcesListViewModel: ForcesListViewModel {
                     self?.loadingStatus.value = .stop
                 }
             case .failure(let error):
-                self?.error = error
+                self?.error.value = error
+                self?.loadingStatus.value = .stop
             }
         })
     }

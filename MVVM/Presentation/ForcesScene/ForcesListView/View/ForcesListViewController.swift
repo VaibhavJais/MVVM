@@ -51,6 +51,11 @@ final class ForcesListViewController: UIViewController, Storyboarded {
                 print("[\(self.className())] Loading: Stop")
             }
         })
+
+        viewModel?.error.bind(listener: { [weak self] (error) in
+            guard let _ = error else { return }
+            self?.showAlert(message: error?.localizedDescription)
+        })
     }
 
     private func setupView() {
@@ -100,3 +105,21 @@ extension ForcesListViewController: UITableViewDelegate {
     }
 }
 
+extension ForcesListViewController {
+    func showAlert(message: String?) {
+        let alert = UIAlertController(title: "Some Error", message: message, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Cancel",
+                                      style: UIAlertAction.Style.default,
+                                      handler: { _ in
+        }))
+
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+
+        }))
+
+        self.present(alert, animated: true, completion: nil)
+    }
+}
