@@ -44,10 +44,7 @@ class BeerListViewModelTest: XCTestCase {
         let viewModel = DefaultBeersListViewModel(beersListUseCase: beersListUseCaseMock)
 
 
-        viewModel.items.bind { (model) in
-            guard let model = model else { return }
-            print(model)
-        }
+        viewModel.items.bind { (_) in}
         viewModel.updateView()
 
         waitForExpectations(timeout: 10, handler: nil)
